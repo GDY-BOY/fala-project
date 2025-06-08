@@ -72,51 +72,70 @@ export default function Home() {
         </section>
 
         {/* Service Details */}
-        <section className="w-full py-16 px-6 md:px-24 bg-[#F8F8F8] flex flex-col items-center">
-          <div className="w-full max-w-5xl grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-[#386641] mb-2" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>Fizjoterapia sportowa</h3>
-              <p className="mb-4" style={{ fontSize: "1.1rem" }}>
-                Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planuję skuteczną i bezpieczną ścieżkę rehabilitacji.<br />
-                Pokazuję, jak ćwiczyć mądrze, by unikać kolejnych kontuzji. Każdy program jest indywidualnie oceniany – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to m.in.:
-              </p>
-              <ul className="list-disc pl-6 mb-2" style={{ fontSize: "1.1rem" }}>
-                <li>trening medyczny</li>
-                <li>suche igłowanie</li>
-                <li>masaż</li>
-                <li>kinesio taping</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#386641] mb-2" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>Fizjoterapia ortopedyczna</h3>
-              <p className="mb-4" style={{ fontSize: "1.1rem" }}>
-                Dla osób po urazach, operacjach, a także tych, którzy zmagają się z bólem lub ograniczeniem ruchomości. Pomagam zrozumieć źródło problemu i pokazuję, co robić, by wrócić na zaplanowaną drogę, która kończy się odzyskaniem sprawności.
-              </p>
-              <ul className="list-disc pl-6 mb-2" style={{ fontSize: "1.1rem" }}>
-                <li>terapia manualna</li>
-                <li>ćwiczenia funkcjonalno-powięziowe</li>
-                <li>suche igłowanie</li>
-                <li>kinesio taping</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#386641] mb-2" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>Masaż sportowy</h3>
-              <p className="mb-4" style={{ fontSize: "1.1rem" }}>
-                Masaż sportowy to coś więcej niż tylko relaks – to element regeneracji niezbędny po intensywnym wysiłku fizycznym. Pomaga pobudzić krążenie, wspiera regenerację, zmniejsza ryzyko kontuzji, zwiększa zakres ruchu i poprawia samopoczucie.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#386641] mb-2" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>Terapia TECAR</h3>
-              <p className="mb-4" style={{ fontSize: "1.1rem" }}>
-                Nowoczesna regeneracja dla aktywnych. Terapia TECAR to nowoczesna metoda fizjoterapeutyczna, która wspomaga regenerację tkanek. Jak działa? Urządzenie przekazuje prąd radiowy do wnętrza ciała, które pobudzają naturalne procesy regeneracyjne. Organizm zaczyna sam lepiej się leczyć. <b>TECAR</b> – zabieg jest bezbolesny, a często wręcz przyjemny!
-              </p>
-              <ul className="list-disc pl-6 mb-2" style={{ fontSize: "1.1rem" }}>
-                <li>Regeneracja po treningu</li>
-                <li>Kontuzje – skręcenia, stłuczenia, złamania</li>
-                <li>Przeciążenia – ból pleców, barku, kolan</li>
-                <li>Przyspieszenie gojenia po operacjach</li>
-              </ul>
-            </div>
+        {/* Fizjoterapia sportowa */}
+        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 flex flex-col items-center">
+          <div className="w-full max-w-3xl flex flex-col items-center">
+            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
+              Fizjoterapia sportowa
+            </h3>
+            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
+              Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planuję skuteczną i bezpieczną ścieżkę rehabilitacji.<br />
+              Pokazuję, jak ćwiczyć mądrze, by unikać kolejnych kontuzji. Każdy program jest indywidualnie oceniany – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to m.in.:
+            </p>
+            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
+              <li>trening medyczny</li>
+              <li>suche igłowanie</li>
+              <li>masaż</li>
+              <li>kinesio taping</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Fizjoterapia ortopedyczna */}
+        <section className="w-full bg-[#EAF2E0] py-16 px-6 md:px-24 flex flex-col items-center">
+          <div className="w-full max-w-3xl flex flex-col items-center">
+            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
+              Fizjoterapia ortopedyczna
+            </h3>
+            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
+              Dla osób po urazach, operacjach, a także tych, którzy zmagają się z bólem lub ograniczeniem ruchomości. Pomagam zrozumieć źródło problemu i pokazuję, co robić, by wrócić na zaplanowaną drogę, która kończy się odzyskaniem sprawności.
+            </p>
+            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
+              <li>terapia manualna</li>
+              <li>ćwiczenia funkcjonalno-powięziowe</li>
+              <li>suche igłowanie</li>
+              <li>kinesio taping</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Masaż sportowy */}
+        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 flex flex-col items-center">
+          <div className="w-full max-w-3xl flex flex-col items-center">
+            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
+              Masaż sportowy
+            </h3>
+            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
+              Masaż sportowy to coś więcej niż tylko relaks – to element regeneracji niezbędny po intensywnym wysiłku fizycznym. Pomaga pobudzić krążenie, wspiera regenerację, zmniejsza ryzyko kontuzji, zwiększa zakres ruchu i poprawia samopoczucie.
+            </p>
+          </div>
+        </section>
+
+        {/* Terapia TECAR */}
+        <section className="w-full bg-[#EAF2E0] py-16 px-6 md:px-24 flex flex-col items-center">
+          <div className="w-full max-w-3xl flex flex-col items-center">
+            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
+              Terapia TECAR
+            </h3>
+            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
+              Nowoczesna regeneracja dla aktywnych. Terapia TECAR to nowoczesna metoda fizjoterapeutyczna, która wspomaga regenerację tkanek. Jak działa? Urządzenie przekazuje prąd radiowy do wnętrza ciała, które pobudzają naturalne procesy regeneracyjne. Organizm zaczyna sam lepiej się leczyć. <b>TECAR</b> – zabieg jest bezbolesny, a często wręcz przyjemny!
+            </p>
+            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
+              <li>Regeneracja po treningu</li>
+              <li>Kontuzje – skręcenia, stłuczenia, złamania</li>
+              <li>Przeciążenia – ból pleców, barku, kolan</li>
+              <li>Przyspieszenie gojenia po operacjach</li>
+            </ul>
           </div>
         </section>
 
