@@ -24,7 +24,7 @@ export default function Home() {
         </section>
 
         {/* Cześć Section */}
-        <section className="w-full bg-[#F8F8F8] py-12 px-6 md:px-12">
+        <section className="w-full bg-[#F8F8F8] py-12 px-6 md:px-12 min-h-screen flex items-center">
           <h2 className="text-2xl text-[#386641] font-bold mb-4">Cześć!</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image src="/images/profile.jpeg" width={400} height={400} alt="Profile" className="rounded-xl" />
@@ -40,7 +40,7 @@ export default function Home() {
         </section>
 
         {/* Usługi Section */}
-        <section className="w-full bg-[#EAF2E0] py-12 px-6 md:px-12">
+        <section className="w-full bg-[#EAF2E0] py-12 px-6 md:px-12 min-h-screen flex items-center">
           <h2 className="text-xl font-bold text-[#6A994E] mb-6">usługi</h2>
           <div className="grid gap-4">
             <button className="border border-[#A984C4] px-4 py-2 rounded">Fizjoterapia sportowa</button>
@@ -50,7 +50,7 @@ export default function Home() {
         </section>
 
         {/* Service Details */}
-        <section className="w-full py-12 px-6 md:px-12 bg-[#F8F8F8] space-y-12">
+        <section className="w-full py-12 px-6 md:px-12 bg-[#F8F8F8] space-y-12 min-h-screen flex items-center">
           <div>
             <h3 className="text-xl font-bold text-[#386641] mb-2">Fizjoterapia sportowa</h3>
             <p>
@@ -81,9 +81,9 @@ export default function Home() {
         </section>
 
         {/* Kontakt */}
-        <section className="w-full bg-[#F8F8F8] py-12 px-6 md:px-12 text-[#386641]">
+        <section className="w-full bg-[#F8F8F8] py-12 px-6 md:px-12 text-[#386641] min-h-screen flex items-center">
           <h2 className="text-xl font-bold mb-4">KONTAKT</h2>
-          <p>Agata Kopa</p>
+          <p>Agata Kępa</p>
           <p>+48 695 296 763</p>
           <p>fala.fizjo@gmail.com</p>
           <p>ul. Kilińskiego 12/2</p>
