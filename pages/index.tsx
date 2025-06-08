@@ -6,7 +6,7 @@ export default function Home() {
     <>
       {/* Logo in top left corner */}
       <div className="fixed top-4 left-4 z-50">
-        <Image src="/fala_logo.png" alt="Fala Logo" width={64} height={64} />
+        <Image src="/images/fala_logo.png" alt="Fala Logo" width={64} height={64} />
       </div>
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto">
