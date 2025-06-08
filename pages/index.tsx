@@ -11,7 +11,7 @@ export default function Home() {
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
-        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-[420px] items-center">
+        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center">
           <div className="p-6 md:p-12 flex flex-col justify-center h-full">
             <h1
               className="mb-2"
@@ -37,7 +37,7 @@ export default function Home() {
         </section>
 
         {/* Cześć Section */}
-        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-5xl grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col items-center md:items-start">
               <div className="rounded-full overflow-hidden w-60 h-60 mb-6 border-8 border-[#F8E1B4]">
@@ -62,7 +62,7 @@ export default function Home() {
         </section>
 
         {/* Usługi Section */}
-        <section className="w-full bg-[#EAF2E0] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <span className="text-[#6A994E] font-bold text-2xl mb-8 uppercase tracking-widest" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>usługi</span>
           <div className="grid gap-4 w-full max-w-md">
             <button className="border border-[#A984C4] px-6 py-2 rounded text-[#6A994E] font-semibold text-lg bg-white hover:bg-[#A984C4] hover:text-white transition">FIZJOTERAPIA SPORTOWA</button>
@@ -70,8 +70,7 @@ export default function Home() {
             <button className="border border-[#A984C4] px-6 py-2 rounded text-[#6A994E] font-semibold text-lg bg-white hover:bg-[#A984C4] hover:text-white transition">MASAŻ SPORTOWY</button>
           </div>
         </section>
-
-        {/* Service Details */}
+        
         {/* Fizjoterapia sportowa */}
         <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
@@ -140,7 +139,7 @@ export default function Home() {
         </section>
 
         {/* Kontakt */}
-        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 text-[#386641] flex flex-col items-center">
+        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24 text-[#386641]">
           <div className="w-full max-w-3xl flex flex-col items-start">
             <span className="font-bold text-2xl mb-4" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>KONTAKT</span>
             <p className="mb-1" style={{ fontSize: "1.1rem", fontWeight: 500 }}>Agata Kępa</p>
