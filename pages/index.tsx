@@ -21,7 +21,7 @@ export default function Home() {
       <section className="w-full bg-[#F8F8F8] py-12 px-6 md:px-12">
         <h2 className="text-2xl text-[#386641] font-bold mb-4">Cześć!</h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <Image src="/profile.jpg" width={400} height={400} alt="Profile" className="rounded-xl" />
+          <Image src="/profile.jpeg" width={400} height={400} alt="Profile" className="rounded-xl" />
           <p>
             Nazywam się Agata Kępa i jestem fizjoterapeutką. <br />
             Działam aktywnie w środowisku sportowym współpracując z:<br /><br />
