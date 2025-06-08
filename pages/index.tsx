@@ -11,7 +11,7 @@ export default function Home() {
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto">
         {/* Hero Section */}
-        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2">
+        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen flex items-center">
           <div className="p-6 md:p-12">
             <h1 className="text-3xl font-bold text-[#386641] mb-4">Fizjoterapia w Gdyni</h1>
             <p className="mb-2 text-lg">Boli Cię? Chcesz bezpiecznie wrócić do sportu?</p>
