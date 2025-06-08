@@ -73,7 +73,7 @@ export default function Home() {
 
         {/* Service Details */}
         {/* Fizjoterapia sportowa */}
-        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Fizjoterapia sportowa
@@ -92,7 +92,7 @@ export default function Home() {
         </section>
 
         {/* Fizjoterapia ortopedyczna */}
-        <section className="w-full bg-[#EAF2E0] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Fizjoterapia ortopedyczna
@@ -110,7 +110,7 @@ export default function Home() {
         </section>
 
         {/* Masaż sportowy */}
-        <section className="w-full bg-[#F8F8F8] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Masaż sportowy
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         {/* Terapia TECAR */}
-        <section className="w-full bg-[#EAF2E0] py-16 px-6 md:px-24 flex flex-col items-center">
+        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Terapia TECAR
