@@ -7,7 +7,7 @@ export default function Home() {
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
-        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center relative">
+        <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative p-0">
           {/* Logo in top left corner, 4x larger, absolute */}
           <div
             className="absolute z-10"
@@ -29,33 +29,82 @@ export default function Home() {
               priority
             />
           </div>
+          {/* Left (text, pinkish) */}
           <div
-            className="p-6 md:p-12 flex flex-col justify-center h-full z-20 hero-content"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-12 md:py-0 z-20"
             style={{
-              marginTop: "36vw", // push down on mobile
-              maxWidth: "100%",
+              background: "#FFF7F1",
+              textAlign: "center",
             }}
           >
-            <h1
-              className="mb-2"
+            <div className="w-full max-w-md mx-auto">
+              <h1
+                className="mb-6"
+                style={{
+                  fontFamily: "'Merriweather', Georgia, serif",
+                  fontSize: "2.5rem",
+                  fontWeight: 900,
+                  color: "#386641",
+                  lineHeight: "3rem",
+                  letterSpacing: "-1px",
+                }}
+              >
+                Fizjoterapia<br />w Gdyni
+              </h1>
+              <p className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Boli Cię?</p>
+              <p className="mb-4" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Chcesz bezpiecznie wrócić do sportu?</p>
+              <p className="mb-8 font-semibold italic" style={{ fontSize: "1.1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
+              <button
+                className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white"
+                style={{
+                  background: "transparent",
+                  boxShadow: "none",
+                }}
+              >
+                kontakt
+              </button>
+            </div>
+          </div>
+          {/* Right (image, yellow) */}
+          <div
+            className="relative w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center"
+            style={{
+              background: "#F8E1B4",
+              overflow: "hidden",
+            }}
+          >
+            {/* Phone number in top right */}
+            <div className="absolute top-8 right-8 z-20 text-[#222] text-lg font-normal hidden md:block" style={{ letterSpacing: "1px" }}>
+              +48 695 296 763
+            </div>
+            <div className="absolute top-4 right-4 z-20 text-[#222] text-base font-normal md:hidden" style={{ letterSpacing: "1px" }}>
+              +48 695 296 763
+            </div>
+            <div
+              className="w-full h-full flex items-center justify-center"
               style={{
-                fontFamily: "'Merriweather', Georgia, serif",
-                fontSize: "2rem",
-                fontWeight: 900,
-                color: "#386641",
-                lineHeight: "2.5rem",
-                letterSpacing: "-1px",
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                borderTopLeftRadius: "0",
+                borderBottomLeftRadius: "0",
+                borderTopRightRadius: "120px",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
               }}
             >
-              Fizjoterapia<br />w Gdyni
-            </h1>
-            <p className="mb-1" style={{ fontSize: "1.1rem", fontWeight: 500 }}>Boli Cię?</p>
-            <p className="mb-2" style={{ fontSize: "1.1rem", fontWeight: 500 }}>Chcesz bezpiecznie wrócić do sportu?</p>
-            <p className="mb-4 font-semibold italic" style={{ fontSize: "1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
-            <button className="border border-[#A984C4] px-6 py-2 rounded hover:bg-[#A984C4] hover:text-white transition w-32 text-[#386641] font-medium" style={{ fontSize: "1rem" }}>kontakt</button>
-          </div>
-          <div className="relative h-64 md:h-[340px] flex items-center justify-center z-10">
-            <Image src="/hero1.jpg" alt="Hero" layout="fill" objectFit="cover" className="rounded-b-[60px] md:rounded-bl-[180px]" />
+              <Image
+                src="/7.jpeg"
+                alt="Hero"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
+            </div>
           </div>
         </section>
 
