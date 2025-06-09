@@ -82,19 +82,19 @@ export default function Home() {
             </div>
             {/* Image with margin and half-dome crop */}
             <div
-              className="relative flex items-start justify-center mx-auto"
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
               style={{
-                width: "70%", // 3x more gap on left/right (from 90% to 70%)
-                height: "85%", // remove bottom gap, keep top gap larger
-                marginTop: "10%", // 2x top gap (from 5% to 10%)
-                marginBottom: "0", // no gap at bottom
+                width: "70%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
                 borderTopRightRadius: "120px",
                 borderTopLeftRadius: "120px",
                 borderBottomRightRadius: "0",
                 borderBottomLeftRadius: "0",
                 overflow: "hidden",
                 background: "#F8E1B4",
-                clipPath: "ellipse(100% 66% at 50% 66%)", // half-dome starts at 2/3rds height
+                clipPath: "ellipse(100% 66% at 50% 66%)",
               }}
             >
               <Image
