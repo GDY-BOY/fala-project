@@ -66,9 +66,9 @@
     @apply bg-background text-foreground;
   }
   @font-face {
-    font-family: 'FreeNotulenSerif';
+    font-family: 'NotulenSerifExtraBold';
     src: url('/fonts/NotulenSerifExtraBold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
   }

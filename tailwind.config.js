@@ -5,7 +5,7 @@ module.exports = {
     theme: {
     	extend: {
     		fontFamily: {
-        	notulen: ['FreeNotulenSerif', 'serif'], // Fallback to serif
+        	notulen: ['NotulenSerifExtraBold', 'serif'], // Fallback to serif
      		 },
 			borderRadius: {
     			lg: 'var(--radius)',
