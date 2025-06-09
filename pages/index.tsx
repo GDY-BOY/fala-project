@@ -80,17 +80,16 @@ export default function Home() {
             <div className="absolute top-4 right-4 z-20 text-[#222] text-base font-normal md:hidden" style={{ letterSpacing: "1px" }}>
               +48 695 296 763
             </div>
+            {/* Image with margin and half-dome crop */}
             <div
-              className="w-full h-full flex items-center justify-center"
+              className="w-[90%] h-[90%] flex items-start justify-center mx-auto mt-[5%] relative"
               style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                borderTopLeftRadius: "0",
-                borderBottomLeftRadius: "0",
                 borderTopRightRadius: "120px",
+                borderTopLeftRadius: "120px",
                 borderBottomRightRadius: "0",
+                borderBottomLeftRadius: "0",
                 overflow: "hidden",
+                background: "#F8E1B4",
               }}
             >
               <Image
