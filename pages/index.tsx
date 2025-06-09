@@ -4,15 +4,15 @@ import { Card } from "@/components/ui/card";
 export default function Home() {
   return (
     <>
-      {/* Logo in top left corner */}
-      <div className="fixed top-4 left-4 z-50">
-        <Image src="/images/fala_logo.png" alt="Fala Logo" width={64} height={64} />
-      </div>
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
         <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center">
           <div className="p-6 md:p-12 flex flex-col justify-center h-full">
+            {/* Logo at the top of Hero section, 4x larger */}
+            <div className="mb-8">
+              <Image src="/images/fala_logo.png" alt="Fala Logo" width={256} height={256} />
+            </div>
             <h1
               className="mb-2"
               style={{
