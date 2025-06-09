@@ -7,16 +7,42 @@ export default function Home() {
       {/* Main content */}
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
-        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center">
+        <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center relative">
           {/* Logo in top left corner, 4x larger, absolute */}
-          <div className="absolute top-8 left-8 z-10">
-            <Image src="/images/fala_logo.png" alt="Fala Logo" width={256} height={256} />
+          <div
+            className="absolute z-10"
+            style={{
+              top: "2vw",
+              left: "2vw",
+              width: "32vw",
+              maxWidth: 256,
+              minWidth: 96,
+              height: "auto",
+            }}
+          >
+            <Image
+              src="/images/fala_logo.png"
+              alt="Fala Logo"
+              width={256}
+              height={256}
+              style={{ width: "100%", height: "auto" }}
+              priority
+            />
           </div>
-          <div className="p-6 md:p-12 flex flex-col justify-center h-full">
-            {/* Logo at the top of Hero section, 4x larger */}
-            <div className="mb-8">
-              
-            </div>
+          <div className="p-6 md:p-12 flex flex-col justify-center h-full z-20"
+            style={{
+              marginTop: "36vw", // push down on mobile
+              maxWidth: "100%",
+            }}
+          >
+            {/* On md+ screens, remove marginTop */}
+            <style jsx>{`
+              @media (min-width: 768px) {
+                div[style*="margin-top"] {
+                  margin-top: 0 !important;
+                }
+              }
+            `}</style>
             <h1
               className="mb-2"
               style={{
@@ -35,7 +61,7 @@ export default function Home() {
             <p className="mb-4 font-semibold italic" style={{ fontSize: "1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
             <button className="border border-[#A984C4] px-6 py-2 rounded hover:bg-[#A984C4] hover:text-white transition w-32 text-[#386641] font-medium" style={{ fontSize: "1rem" }}>kontakt</button>
           </div>
-          <div className="relative h-64 md:h-[340px] flex items-center justify-center">
+          <div className="relative h-64 md:h-[340px] flex items-center justify-center z-10">
             <Image src="/hero1.jpg" alt="Hero" layout="fill" objectFit="cover" className="rounded-b-[60px] md:rounded-bl-[180px]" />
           </div>
         </section>
