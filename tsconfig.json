@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-      "jsx": "preserve", // or "react-jsx" if you're using React 17+ with the new JSX transform
+      "jsx": "react-jsx", // or "react-jsx" if you're using React 17+ with the new JSX transform
+      "types": ["styled-jsx"],
       "module": "esnext",
       "target": "es6",
       "allowJs": true,
@@ -14,6 +15,6 @@
       "@/*": ["./*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "styled-jsx.d.ts"],
     "exclude": ["node_modules"]
   }
