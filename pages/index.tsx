@@ -41,7 +41,7 @@ export default function Home() {
               <h1
                 className="mb-6"
                 style={{
-                  fontFamily: "'Merriweather', Georgia, serif",
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontSize: "2.5rem",
                   fontWeight: 900,
                   color: "#386641",
