@@ -94,7 +94,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/7.jpeg"
+                src="/images/7.jpeg"
                 alt="Hero"
                 fill
                 style={{
