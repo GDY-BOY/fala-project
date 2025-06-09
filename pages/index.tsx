@@ -8,10 +8,14 @@ export default function Home() {
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
         <section className="bg-[#FFF7F1] w-full grid grid-cols-1 md:grid-cols-2 min-h-screen h-screen items-center">
+          {/* Logo in top left corner, 4x larger, absolute */}
+          <div className="absolute top-8 left-8 z-10">
+            <Image src="/images/fala_logo.png" alt="Fala Logo" width={256} height={256} />
+          </div>
           <div className="p-6 md:p-12 flex flex-col justify-center h-full">
             {/* Logo at the top of Hero section, 4x larger */}
             <div className="mb-8">
-              <Image src="/images/fala_logo.png" alt="Fala Logo" width={256} height={256} />
+              
             </div>
             <h1
               className="mb-2"
