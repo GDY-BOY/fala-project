@@ -31,10 +31,11 @@ export default function Home() {
           </div>
           {/* Left (text, pinkish) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-12 md:py-0 z-20"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 flex-1 px-6 md:px-12 py-12 md:py-0 z-20"
             style={{
               background: "#FFF7F1",
               textAlign: "center",
+              minHeight: 0,
             }}
           >
             <div className="w-full max-w-md mx-auto">
@@ -67,10 +68,11 @@ export default function Home() {
           </div>
           {/* Right (image, yellow) */}
           <div
-            className="relative w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center"
+            className="relative w-full md:w-1/2 flex-1 flex items-center justify-center"
             style={{
               background: "#F8E1B4",
               overflow: "hidden",
+              minHeight: 0,
             }}
           >
             {/* Phone number in top right */}
