@@ -29,20 +29,13 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="p-6 md:p-12 flex flex-col justify-center h-full z-20"
+          <div
+            className="p-6 md:p-12 flex flex-col justify-center h-full z-20 hero-content"
             style={{
               marginTop: "36vw", // push down on mobile
               maxWidth: "100%",
             }}
           >
-            {/* On md+ screens, remove marginTop */}
-            <style jsx>{`
-              @media (min-width: 768px) {
-                div[style*="margin-top"] {
-                  margin-top: 0 !important;
-                }
-              }
-            `}</style>
             <h1
               className="mb-2"
               style={{
@@ -180,11 +173,16 @@ export default function Home() {
           </div>
         </section>
       </main>
-      {/* Add global font imports */}
+      {/* Add global font imports and responsive style fix */}
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@700;900&display=swap');
         body {
           font-family: 'Inter', Arial, sans-serif;
+        }
+        @media (min-width: 768px) {
+          .hero-content {
+            margin-top: 0 !important;
+          }
         }
       `}</style>
     </>
