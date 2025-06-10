@@ -51,18 +51,20 @@ export default function Home() {
               >
                 Fizjoterapia<br />w Gdyni
               </h1>
-              <p className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Boli Cię?</p>
-              <p className="mb-4" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Chcesz bezpiecznie wrócić do sportu?</p>
-              <p className="mb-8 font-semibold italic" style={{ fontSize: "1.1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
-              <button
-                className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white"
-                style={{
-                  background: "transparent",
-                  boxShadow: "none",
-                }}
-              >
-                kontakt
-              </button>
+              <div style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                <p className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Boli Cię?</p>
+                <p className="mb-4" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Chcesz bezpiecznie wrócić do sportu?</p>
+                <p className="mb-8 font-semibold italic" style={{ fontSize: "1.1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
+                <button
+                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white"
+                  style={{
+                    background: "transparent",
+                    boxShadow: "none",
+                  }}
+                >
+                  kontakt
+                </button>
+              </div>
             </div>
           </div>
           {/* Right (image, yellow) */}
