@@ -97,6 +97,10 @@ export default function Home() {
                     background: "transparent",
                     boxShadow: "none",
                   }}
+                  onClick={() => {
+                    const el = document.getElementById("kontakt-section");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   kontakt
                 </button>
@@ -260,7 +264,7 @@ export default function Home() {
         </section>
 
         {/* Kontakt */}
-        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24 text-[#386641]">
+        <section id="kontakt-section" className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24 text-[#386641]">
           <div className="w-full max-w-3xl flex flex-col items-start">
             <span className="font-bold text-2xl mb-4" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>KONTAKT</span>
             <p className="mb-1" style={{ fontSize: "1.1rem", fontWeight: 500 }}>Agata Kępa</p>
