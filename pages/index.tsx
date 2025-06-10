@@ -304,6 +304,7 @@ export default function Home() {
                   minWidth: 220,
                   marginTop: "0.5rem",
                   marginBottom: "0.5rem",
+                  display: "block",
                 }}
               >
                 <div
@@ -311,7 +312,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     background: "transparent",
-                    display: "block", // Ensure the container takes up space
+                    display: "block",
                   }}
                 ></div>
               </div>
