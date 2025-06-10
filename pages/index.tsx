@@ -111,12 +111,19 @@ export default function Home() {
               overflow: "hidden",
             }}
           >
-            {/* Phone number in top right */}
-            <div className="absolute top-8 right-8 z-20 text-[#222] text-lg font-normal hidden md:block" style={{ letterSpacing: "1px" }}>
-              +48 695 296 763
-            </div>
-            <div className="absolute top-4 right-4 z-20 text-[#222] text-base font-normal md:hidden" style={{ letterSpacing: "1px" }}>
-              +48 695 296 763
+            {/* Phone number in top right, always visible */}
+            <div
+              className="absolute z-20 font-normal"
+              style={{
+                top: "2vw",
+                right: "2vw",
+                color: "#222",
+                letterSpacing: "1px",
+                fontSize: "1.2rem",
+                fontWeight: 400,
+              }}
+            >
+              <span className="phone-number">+48 695 296 763</span>
             </div>
             {/* Image with margin and half-dome crop */}
             <div
@@ -300,6 +307,9 @@ export default function Home() {
           .md\:py-3 {
             padding-top: 0.75rem !important;
             padding-bottom: 0.75rem !important;
+          }
+          .phone-number {
+            font-size: 2.4rem !important;
           }
         }
       `}</style>
