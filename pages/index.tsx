@@ -326,10 +326,16 @@ export default function Home() {
               </div>
             </div>
             {/* Mini logo in bottom right */}
-            <div className="absolute right-0 bottom-0 md:static flex-1 flex flex-col items-end justify-end h-full">
-              <div className="mt-12 md:mt-0 md:mb-0 mb-4">
-                <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
-              </div>
+            <div
+              className="pointer-events-none"
+              style={{
+                position: "fixed",
+                right: "min(2vw, 24px)",
+                bottom: "min(2vw, 24px)",
+                zIndex: 40,
+              }}
+            >
+              <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
             </div>
           </div>
         </section>
