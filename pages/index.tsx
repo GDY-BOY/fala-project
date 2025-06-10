@@ -53,12 +53,12 @@ export default function Home() {
               </h1>
               <div
                 style={{ fontFamily: "'DM Sans', Arial, sans-serif", textAlign: "left" }}
-                className="hero-text md:text-[2.2rem] md:leading-tight md:mb-16"
+                className="md:text-[2.2rem] md:leading-tight md:mb-16"
               >
                 <p
                   className="mb-6 hero-lead"
                   style={{
-                    fontSize: "1.5rem", // 1rem * 1.5
+                    fontSize: "1rem",
                     fontWeight: 500,
                     color: "#222426",
                     textAlign: "left",
@@ -69,7 +69,7 @@ export default function Home() {
                 <p
                   className="mb-6 hero-lead"
                   style={{
-                    fontSize: "1.5rem",
+                    fontSize: "1rem",
                     fontWeight: 500,
                     color: "#222426",
                     textAlign: "left",
@@ -80,7 +80,7 @@ export default function Home() {
                 <p
                   className="mb-6 font-semibold italic hero-lead"
                   style={{
-                    fontSize: "1.425rem", // 0.95rem * 1.5
+                    fontSize: "0.95rem",
                     color: "#386641",
                     textAlign: "left",
                   }}
@@ -88,11 +88,10 @@ export default function Home() {
                   Wiem jak Ci pomóc!
                 </p>
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white hero-btn md:text-2xl md:px-12 md:py-3"
+                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
                   style={{
                     background: "transparent",
                     boxShadow: "none",
-                    fontSize: "1.5rem", // 1rem * 1.5 for button text
                   }}
                 >
                   kontakt
@@ -284,11 +283,19 @@ export default function Home() {
             font-size: 2.2rem !important;
           }
           .hero-lead {
-            font-size: 1.65rem !important; /* 1.1rem * 1.5 */
+            font-size: 1.1rem !important;
             margin-bottom: 2rem !important;
           }
-          .hero-btn {
-            font-size: 2.25rem !important; /* 1.5rem * 1.5 */
+          .md\:text-2xl {
+            font-size: 1.5rem !important;
+          }
+          .md\:px-12 {
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+          }
+          .md\:py-3 {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
           }
         }
       `}</style>
