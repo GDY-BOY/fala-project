@@ -266,7 +266,7 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-auto flex flex-col justify-start items-center px-4 md:px-24"
+          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
           style={{ background: "#F8F4F1", position: "relative" }}
         >
           <div className="relative w-full max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
