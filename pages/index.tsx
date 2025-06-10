@@ -287,7 +287,7 @@ export default function Home() {
             font-size: 2.2rem !important;
           }
           .hero-lead {
-            font-size: 1.1rem !important;
+            font-size: 2.2rem !important;
             margin-bottom: 2rem !important;
           }
           .md\:text-2xl {
