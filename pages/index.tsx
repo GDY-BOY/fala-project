@@ -296,15 +296,16 @@ export default function Home() {
               <div
                 className="w-full flex justify-start"
                 style={{
-                  background: "transparent", // Removed background color
-                  borderRadius: 0, // Removed radius
-                  boxShadow: "none", // No shadow
-                  padding: 0, // No padding
+                  background: "transparent",
+                  borderRadius: 0,
+                  boxShadow: "none",
+                  padding: 0,
                   maxWidth: 400,
                   minWidth: 220,
                   marginTop: "0.5rem",
                   marginBottom: "0.5rem",
                   alignSelf: "flex-start",
+                  position: "static", // Ensure it's not absolutely positioned
                 }}
               >
                 <div
@@ -312,6 +313,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     background: "transparent",
+                    position: "static", // Ensure widget is not absolutely positioned
                   }}
                 ></div>
               </div>
