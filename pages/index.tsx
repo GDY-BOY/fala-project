@@ -37,7 +37,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <div className="w-full max-w-md mx-auto">
+            <div className="w-full max-w-md mx-auto md:max-w-2xl">
               <h1
                 className="mb-6"
                 style={{
@@ -51,12 +51,41 @@ export default function Home() {
               >
                 Fizjoterapia<br />w Gdyni
               </h1>
-              <div style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-                <p className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Boli Cię?</p>
-                <p className="mb-4" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#222" }}>Chcesz bezpiecznie wrócić do sportu?</p>
-                <p className="mb-8 font-semibold italic" style={{ fontSize: "1.1rem", color: "#386641" }}>Wiem jak Ci pomóc!</p>
+              <div
+                style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}
+                className="md:text-[3.45rem] md:leading-tight md:mb-16"
+              >
+                <p
+                  className="mb-2"
+                  style={{
+                    fontSize: "1.15rem",
+                    fontWeight: 500,
+                    color: "#222",
+                  }}
+                >
+                  Boli Cię?
+                </p>
+                <p
+                  className="mb-4"
+                  style={{
+                    fontSize: "1.15rem",
+                    fontWeight: 500,
+                    color: "#222",
+                  }}
+                >
+                  Chcesz bezpiecznie wrócić do sportu?
+                </p>
+                <p
+                  className="mb-8 font-semibold italic"
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "#386641",
+                  }}
+                >
+                  Wiem jak Ci pomóc!
+                </p>
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white"
+                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-3xl md:px-16 md:py-4"
                   style={{
                     background: "transparent",
                     boxShadow: "none",
@@ -237,6 +266,34 @@ export default function Home() {
         @media (min-width: 768px) {
           .hero-content {
             margin-top: 0 !important;
+          }
+        }
+      `}</style>
+      <style jsx>{`
+        @media (min-width: 768px) {
+          h1 {
+            font-size: 7.5rem !important;
+            line-height: 8rem !important;
+          }
+          .md\\:text-[3.45rem] {
+            font-size: 3.45rem !important;
+          }
+          .md\\:leading-tight {
+            line-height: 1.1 !important;
+          }
+          .md\\:mb-16 {
+            margin-bottom: 4rem !important;
+          }
+          .md\\:text-3xl {
+            font-size: 2rem !important;
+          }
+          .md\\:px-16 {
+            padding-left: 4rem !important;
+            padding-right: 4rem !important;
+          }
+          .md\\:py-4 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
           }
         }
       `}</style>
