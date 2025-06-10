@@ -302,9 +302,18 @@ export default function Home() {
                   padding: "0.5rem 0",
                   maxWidth: 400,
                   minWidth: 220,
+                  marginTop: "0.5rem",
+                  marginBottom: "0.5rem",
+                  alignSelf: "flex-start",
                 }}
               >
-                <div id="booksy-widget-container" style={{ width: "100%" }}></div>
+                <div
+                  id="booksy-widget-container"
+                  style={{
+                    width: "100%",
+                    background: "transparent",
+                  }}
+                ></div>
               </div>
             </div>
             {/* Middle column */}
