@@ -56,7 +56,7 @@ export default function Home() {
                 className="md:text-[3.45rem] md:leading-tight md:mb-16"
               >
                 <p
-                  className="mb-2"
+                  className="mb-2 hero-lead"
                   style={{
                     fontSize: "1.15rem",
                     fontWeight: 500,
@@ -66,7 +66,7 @@ export default function Home() {
                   Boli Cię?
                 </p>
                 <p
-                  className="mb-4"
+                  className="mb-4 hero-lead"
                   style={{
                     fontSize: "1.15rem",
                     fontWeight: 500,
@@ -76,7 +76,7 @@ export default function Home() {
                   Chcesz bezpiecznie wrócić do sportu?
                 </p>
                 <p
-                  className="mb-8 font-semibold italic"
+                  className="mb-8 font-semibold italic hero-lead"
                   style={{
                     fontSize: "1.1rem",
                     color: "#386641",
@@ -275,25 +275,28 @@ export default function Home() {
             font-size: 7.5rem !important;
             line-height: 8rem !important;
           }
-          .md\\:text-[3.45rem] {
+          .md\:text-[3.45rem] {
             font-size: 3.45rem !important;
           }
-          .md\\:leading-tight {
+          .md\:leading-tight {
             line-height: 1.1 !important;
           }
-          .md\\:mb-16 {
+          .md\:mb-16 {
             margin-bottom: 4rem !important;
           }
-          .md\\:text-3xl {
+          .md\:text-3xl {
             font-size: 2rem !important;
           }
-          .md\\:px-16 {
+          .md\:px-16 {
             padding-left: 4rem !important;
             padding-right: 4rem !important;
           }
-          .md\\:py-4 {
+          .md\:py-4 {
             padding-top: 1rem !important;
             padding-bottom: 1rem !important;
+          }
+          .hero-lead {
+            font-size: 3.45rem !important;
           }
         }
       `}</style>
