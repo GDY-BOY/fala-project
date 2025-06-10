@@ -39,13 +39,13 @@ export default function Home() {
           >
             <div className="w-full max-w-md mx-auto md:max-w-2xl">
               <h1
-                className="mb-6"
+                className="mb-8 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
-                  fontSize: "2.5rem",
+                  fontSize: "2.2rem",
                   fontWeight: 900,
                   color: "#386641",
-                  lineHeight: "3rem",
+                  lineHeight: "2.7rem",
                   letterSpacing: "-1px",
                 }}
               >
@@ -53,34 +53,34 @@ export default function Home() {
               </h1>
               <div
                 style={{ fontFamily: "'DM Sans', Arial, sans-serif", textAlign: "left" }}
-                className="md:text-[3.45rem] md:leading-tight md:mb-16"
+                className="md:text-[2.2rem] md:leading-tight md:mb-16"
               >
                 <p
-                  className="mb-2 hero-lead"
+                  className="mb-6 hero-lead"
                   style={{
-                    fontSize: "1.15rem",
+                    fontSize: "1rem",
                     fontWeight: 500,
-                    color: "#222426", // slightly greyish
+                    color: "#222426",
                     textAlign: "left",
                   }}
                 >
                   Boli Cię?
                 </p>
                 <p
-                  className="mb-4 hero-lead"
+                  className="mb-6 hero-lead"
                   style={{
-                    fontSize: "1.15rem",
+                    fontSize: "1rem",
                     fontWeight: 500,
-                    color: "#222426", // slightly greyish
+                    color: "#222426",
                     textAlign: "left",
                   }}
                 >
                   Chcesz bezpiecznie wrócić do sportu?
                 </p>
                 <p
-                  className="mb-8 font-semibold italic hero-lead"
+                  className="mb-6 font-semibold italic hero-lead"
                   style={{
-                    fontSize: "1.1rem",
+                    fontSize: "0.95rem",
                     color: "#386641",
                     textAlign: "left",
                   }}
@@ -88,7 +88,7 @@ export default function Home() {
                   Wiem jak Ci pomóc!
                 </p>
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-3xl md:px-16 md:py-4"
+                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
                   style={{
                     background: "transparent",
                     boxShadow: "none",
@@ -275,31 +275,27 @@ export default function Home() {
       <style jsx>{`
         @media (min-width: 768px) {
           h1 {
-            font-size: 7.5rem !important;
-            line-height: 8rem !important;
+            font-size: 4.5rem !important;
+            line-height: 5rem !important;
+            margin-bottom: 2.5rem !important;
           }
-          .md\:text-[3.45rem] {
-            font-size: 3.45rem !important;
-          }
-          .md\:leading-tight {
-            line-height: 1.1 !important;
-          }
-          .md\:mb-16 {
-            margin-bottom: 4rem !important;
-          }
-          .md\:text-3xl {
-            font-size: 2rem !important;
-          }
-          .md\:px-16 {
-            padding-left: 4rem !important;
-            padding-right: 4rem !important;
-          }
-          .md\:py-4 {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
+          .md\:text-[2.2rem] {
+            font-size: 2.2rem !important;
           }
           .hero-lead {
-            font-size: 3.45rem !important;
+            font-size: 1.1rem !important;
+            margin-bottom: 2rem !important;
+          }
+          .md\:text-2xl {
+            font-size: 1.5rem !important;
+          }
+          .md\:px-12 {
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+          }
+          .md\:py-3 {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
           }
         }
       `}</style>
