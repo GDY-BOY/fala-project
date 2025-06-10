@@ -264,14 +264,73 @@ export default function Home() {
         </section>
 
         {/* Kontakt */}
-        <section id="kontakt-section" className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24 text-[#386641]">
-          <div className="w-full max-w-3xl flex flex-col items-start">
-            <span className="font-bold text-2xl mb-4" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>KONTAKT</span>
-            <p className="mb-1" style={{ fontSize: "1.1rem", fontWeight: 500 }}>Agata Kępa</p>
-            <p className="mb-1" style={{ fontSize: "1.1rem" }}>+48 695 296 763</p>
-            <p className="mb-1" style={{ fontSize: "1.1rem" }}>fala.fizjo@gmail.com</p>
-            <p className="mb-4" style={{ fontSize: "1.1rem" }}>ul. Kilińskiego 12/2</p>
-            <button className="border border-[#A984C4] px-6 py-2 rounded text-[#386641] font-medium hover:bg-[#A984C4] hover:text-white transition w-40" style={{ fontSize: "1rem" }}>REZERWUJ</button>
+        <section
+          id="kontakt-section"
+          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
+          style={{ background: "#F8F4F1" }}
+        >
+          <div className="relative w-full max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
+            {/* Left column */}
+            <div className="flex-1 flex flex-col items-start" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+              <span
+                className="mb-8"
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "3rem",
+                  color: "#386641",
+                  letterSpacing: "-2px",
+                  lineHeight: "1",
+                  display: "block",
+                }}
+              >
+                KONTAKT
+              </span>
+              <div className="mb-8 text-[#444] text-xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                <div>Agata Kępa</div>
+                <div>+48 695 296 763</div>
+                <div className="mt-6">Gdynia</div>
+                <div>ul. Kilińskiego 12/2</div>
+              </div>
+              <button
+                className="mt-4 border-2 border-[#A984C4] px-10 py-3 rounded-md font-bold text-lg md:text-xl transition text-[#A984C4] bg-transparent hover:bg-[#A984C4] hover:text-white"
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  background: "transparent",
+                  boxShadow: "none",
+                  color: "#A984C4",
+                  letterSpacing: "1px",
+                  width: "min-content",
+                  minWidth: 180,
+                }}
+              >
+                REZERWUJ
+              </button>
+            </div>
+            {/* Middle column */}
+            <div className="flex-1 flex flex-col items-start md:items-center md:justify-center mt-8 md:mt-0" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+              <div className="mb-8 text-[#444] text-xl">
+                <div>
+                  <span className="block">falafizjo@gmail.com</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4 text-[#444] text-xl">
+                <div className="flex items-center gap-3">
+                  <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} />
+                  <span>agatakepa.falafizjo</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} />
+                  <span>Fala Fizjo</span>
+                </div>
+              </div>
+            </div>
+            {/* Mini logo in bottom right */}
+            <div className="absolute right-0 bottom-0 md:static flex-1 flex flex-col items-end justify-end h-full">
+              <div className="mt-12 md:mt-0 md:mb-0 mb-4">
+                <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
+              </div>
+            </div>
           </div>
         </section>
       </main>
