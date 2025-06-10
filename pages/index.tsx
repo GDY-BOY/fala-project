@@ -52,7 +52,7 @@ export default function Home() {
                 Fizjoterapia<br />w Gdyni
               </h1>
               <div
-                style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}
+                style={{ fontFamily: "'DM Sans', Arial, sans-serif", textAlign: "left" }}
                 className="md:text-[3.45rem] md:leading-tight md:mb-16"
               >
                 <p
@@ -60,7 +60,8 @@ export default function Home() {
                   style={{
                     fontSize: "1.15rem",
                     fontWeight: 500,
-                    color: "#222",
+                    color: "#222426", // slightly greyish
+                    textAlign: "left",
                   }}
                 >
                   Boli Cię?
@@ -70,7 +71,8 @@ export default function Home() {
                   style={{
                     fontSize: "1.15rem",
                     fontWeight: 500,
-                    color: "#222",
+                    color: "#222426", // slightly greyish
+                    textAlign: "left",
                   }}
                 >
                   Chcesz bezpiecznie wrócić do sportu?
@@ -80,6 +82,7 @@ export default function Home() {
                   style={{
                     fontSize: "1.1rem",
                     color: "#386641",
+                    textAlign: "left",
                   }}
                 >
                   Wiem jak Ci pomóc!
