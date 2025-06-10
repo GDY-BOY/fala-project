@@ -303,6 +303,12 @@ export default function Home() {
                   width: "min-content",
                   minWidth: 180,
                 }}
+                onClick={() => {
+                  if (window.BooksyWidget) {
+                    window.BooksyWidget.open();
+                  }
+                }}
+                type="button"
               >
                 REZERWUJ
               </button>
@@ -381,6 +387,12 @@ export default function Home() {
           }
         }
       `}</style>
+      {/* Booksy widget script */}
+      <script
+        type="text/javascript"
+        src="https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl"
+        async
+      ></script>
     </>
   );
 }
