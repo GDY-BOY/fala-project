@@ -10,14 +10,18 @@ export default function Home() {
         <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative p-0">
           {/* Logo in top left corner, 4x larger, absolute */}
           <div
-            className="absolute z-10"
+            className="z-30"
             style={{
-              top: "2vw",
-              left: "2vw",
-              width: "32vw",
-              maxWidth: 256,
-              minWidth: 96,
-              height: "auto",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              padding: "2vw",
+              width: "256px",
+              height: "256px",
+              maxWidth: "30vw",
+              minWidth: "96px",
+              pointerEvents: "none", // so it doesn't block interactions
+              background: "none",
             }}
           >
             <Image
@@ -25,7 +29,7 @@ export default function Home() {
               alt="Fala Logo"
               width={256}
               height={256}
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "auto", display: "block" }}
               priority
             />
           </div>
