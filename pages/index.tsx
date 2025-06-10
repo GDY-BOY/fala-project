@@ -326,25 +326,29 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 text-[#444] text-xl">
                 <div className="flex items-center gap-3">
-                  <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} />
                   <a 
                     href="https://www.instagram.com/agata.falafizjo/?hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#444] hover:text-[#386641] transition-colors"
+                    className="flex items-center gap-3 group"
                   >
-                    agata.falafizjo
+                    <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors">
+                      agata.falafizjo
+                    </span>
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} />
                   <a
                     href="https://www.facebook.com/profile.php?id=61576770137381"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#444] hover:text-[#386641] transition-colors"
+                    className="flex items-center gap-3 group"
                   >
-                    Fala Fizjo
+                    <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors">
+                      Fala Fizjo
+                    </span>
                   </a>
                 </div>
               </div>
