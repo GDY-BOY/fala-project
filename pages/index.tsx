@@ -292,9 +292,19 @@ export default function Home() {
                 <div className="mt-6">Gdynia</div>
                 <div>ul. Kilińskiego 12/2</div>
               </div>
-              {/* Replace REZERWUJ button with Booksy widget */}
-              <div className="mt-4 w-full flex justify-start">
-                <div id="booksy-widget-container" style={{ width: 320, maxWidth: "100%" }}></div>
+              {/* Booksy widget below address, blending with background */}
+              <div
+                className="w-full flex justify-start"
+                style={{
+                  background: "#F8F4F1",
+                  borderRadius: 16,
+                  boxShadow: "0 2px 12px 0 rgba(0,0,0,0.03)",
+                  padding: "0.5rem 0",
+                  maxWidth: 400,
+                  minWidth: 220,
+                }}
+              >
+                <div id="booksy-widget-container" style={{ width: "100%" }}></div>
               </div>
             </div>
             {/* Middle column */}
