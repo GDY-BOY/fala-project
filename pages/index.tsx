@@ -292,10 +292,26 @@ export default function Home() {
                 <div className="mt-6">Gdynia</div>
                 <div>ul. Kilińskiego 12/2</div>
               </div>
-              {/* Replace REZERWUJ button with Booksy widget */}
-              <div className="mt-4 w-full flex justify-start">
-                <div id="booksy-widget-container" style={{ width: 320, maxWidth: "100%" }}></div>
-              </div>
+              <button
+                className="mt-4 border-2 border-[#A984C4] px-10 py-3 rounded-md font-bold text-lg md:text-xl transition text-[#A984C4] bg-transparent hover:bg-[#A984C4] hover:text-white"
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  background: "transparent",
+                  boxShadow: "none",
+                  color: "#A984C4",
+                  letterSpacing: "1px",
+                  width: "min-content",
+                  minWidth: 180,
+                }}
+                onClick={() => {
+                  if (window.BooksyWidget) {
+                    window.BooksyWidget.open();
+                  }
+                }}
+                type="button"
+              >
+                REZERWUJ
+              </button>
             </div>
             {/* Middle column */}
             <div className="flex-1 flex flex-col items-start md:items-center md:justify-center mt-8 md:mt-0" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
@@ -377,22 +393,6 @@ export default function Home() {
         src="https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl"
         async
       ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.addEventListener('DOMContentLoaded', function() {
-              if (window.BooksyWidget && document.getElementById('booksy-widget-container')) {
-                window.BooksyWidget.init({
-                  container: '#booksy-widget-container',
-                  id: 300509,
-                  country: 'pl',
-                  lang: 'pl'
-                });
-              }
-            });
-          `,
-        }}
-      />
     </>
   );
 }
