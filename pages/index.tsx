@@ -266,7 +266,7 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
+          className="w-full min-h-screen h-auto flex flex-col justify-start items-center px-4 md:px-24"
           style={{ background: "#F8F4F1", position: "relative" }}
         >
           <div className="relative w-full max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
@@ -296,10 +296,10 @@ export default function Home() {
               <div
                 className="w-full flex justify-start"
                 style={{
-                  background: "#F8F4F1",
-                  borderRadius: 16,
-                  boxShadow: "0 2px 12px 0 rgba(0,0,0,0.03)",
-                  padding: "0.5rem 0",
+                  background: "transparent", // Removed background color
+                  borderRadius: 0, // Removed radius
+                  boxShadow: "none", // No shadow
+                  padding: 0, // No padding
                   maxWidth: 400,
                   minWidth: 220,
                   marginTop: "0.5rem",
