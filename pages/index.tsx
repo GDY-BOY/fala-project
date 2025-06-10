@@ -266,12 +266,12 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
+          className="w-full min-h-screen flex items-start pt-24 px-4 md:px-24"
           style={{ background: "#F8F4F1", position: "relative" }}
         >
-          <div className="relative w-full max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
+          <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             {/* Left column */}
-            <div className="flex-1 flex flex-col items-start" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+            <div className="flex flex-col" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
               <span
                 className="mb-8"
                 style={{
@@ -281,44 +281,32 @@ export default function Home() {
                   color: "#386641",
                   letterSpacing: "-2px",
                   lineHeight: "1",
-                  display: "block",
                 }}
               >
                 KONTAKT
               </span>
-              <div className="mb-8 text-[#444] text-xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+              <div className="mb-4 text-[#444] text-xl">
                 <div>Agata Kępa</div>
                 <div>+48 695 296 763</div>
                 <div className="mt-6">Gdynia</div>
-                <div>ul. Kilińskiego 12/2</div>
-              </div>
-              {/* Booksy widget below address, blending with background */}
-              <div
-                className="w-full flex justify-start"
-                style={{
-                  background: "transparent",
-                  borderRadius: 0,
-                  boxShadow: "none",
-                  padding: 0,
-                  maxWidth: 400,
-                  minWidth: 220,
-                  marginTop: "0.5rem",
-                  marginBottom: "0.5rem",
-                  display: "block",
-                }}
-              >
-                <div
-                  id="booksy-widget-container"
-                  style={{
-                    width: "100%",
-                    background: "transparent",
-                    display: "block",
-                  }}
-                ></div>
+                <div className="mb-8">ul. Kilińskiego 12/2</div>
+                
+                {/* Booksy widget container */}
+                <div style={{ maxWidth: "320px" }}>
+                  <div
+                    id="booksy-widget-container"
+                    className="w-full"
+                    style={{
+                      background: "transparent",
+                      minHeight: "80px",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
-            {/* Middle column */}
-            <div className="flex-1 flex flex-col items-start md:items-center md:justify-center mt-8 md:mt-0" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+
+            {/* Right column */}
+            <div className="flex flex-col" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
               <div className="mb-8 text-[#444] text-xl">
                 <div>
                   <span className="block">falafizjo@gmail.com</span>
