@@ -333,8 +333,8 @@ export default function Home() {
                     className="flex items-center gap-3 group"
                   >
                     <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                    <span className="text-[#444] group-hover:text-[#386641] transition-colors">
-                      agata.falafizjo
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641] cursor-pointer">
+                      Obserwuj na Instagramie
                     </span>
                   </a>
                 </div>
@@ -346,8 +346,8 @@ export default function Home() {
                     className="flex items-center gap-3 group"
                   >
                     <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                    <span className="text-[#444] group-hover:text-[#386641] transition-colors">
-                      Fala Fizjo
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641] cursor-pointer">
+                      Polub na Facebooku
                     </span>
                   </a>
                 </div>
