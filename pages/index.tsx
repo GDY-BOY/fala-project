@@ -311,6 +311,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     background: "transparent",
+                    display: "block", // Ensure the container takes up space
                   }}
                 ></div>
               </div>
