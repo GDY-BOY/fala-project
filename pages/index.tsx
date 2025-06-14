@@ -962,7 +962,7 @@ export default function Home() {
           className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24 py-8 md:py-0"
           style={{ background: "#F8F4F1" }}
         >
-          <div className="w-full max-w-6xl">
+          <div className="w-full max-w-6xl flex flex-col">
             <h2
               className="mb-12 md:mb-16"
               style={{
@@ -978,13 +978,13 @@ export default function Home() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-              {/* Left column */}
-              <div className="flex flex-col space-y-6">
-                <div className="text-[#444] space-y-2" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+              {/* Left column - Address and Booksy */}
+              <div className="space-y-8">
+                <div className="text-[#444]" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
                   <div className="text-xl md:text-2xl">Agata Kępa</div>
                   <div className="text-xl md:text-2xl">+48 695 296 763</div>
                   <div className="text-xl md:text-2xl mt-6">Gdynia</div>
-                  <div className="text-xl md:text-2xl mb-8">ul. Kilińskiego 12/2</div>
+                  <div className="text-xl md:text-2xl">ul. Kilińskiego 12/2</div>
                 </div>
                 
                 <div className="w-full max-w-[300px]">
@@ -995,8 +995,8 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right column */}
-              <div className="flex flex-col space-y-6">
+              {/* Right column - Email and Social */}
+              <div className="space-y-8">
                 <div className="text-[#444] text-xl md:text-2xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
                   <div>falafizjo@gmail.com</div>
                 </div>
