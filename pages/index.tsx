@@ -106,10 +106,11 @@ export default function Home() {
                   Wiem jak Ci pomóc!
                 </p>
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
+                  className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
                   style={{
                     background: "transparent",
                     boxShadow: "none",
+                    borderRadius: 0, // sharp corners
                   }}
                   onClick={() => {
                     const el = document.getElementById("kontakt-section");
@@ -310,7 +311,7 @@ export default function Home() {
                 <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
               </p>
               <button
-                className="border-2 border-[#A984C4] px-6 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
+                className="border-2 border-[#A984C4] px-6 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
                 style={{
                   background: "transparent",
                   boxShadow: "none",
@@ -322,6 +323,15 @@ export default function Home() {
                   display: "block",
                   textAlign: "center",
                   letterSpacing: "0.5px",
+                  borderRadius: 0, // sharp corners
+                }}
+                onClick={() => {
+                  const el = document.getElementById("uslugi-section");
+                  if (el) {
+                    setTimeout(() => {
+                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100);
+                  }
                 }}
               >
                 usługi
@@ -368,7 +378,7 @@ export default function Home() {
         </section>
 
         {/* Usługi Section */}
-        <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0" style={{ background: "#FFF7F1" }}>
+        <section id="uslugi-section" className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0" style={{ background: "#FFF7F1" }}>
           {/* Left (title + buttons) */}
           <div
             className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-0 py-4 md:py-0 z-20"
@@ -398,7 +408,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     border: "3px solid #C7A6E5",
-                    borderRadius: 0,
+                    borderRadius: 0, // sharp corners
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
@@ -420,7 +430,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     border: "3px solid #C7A6E5",
-                    borderRadius: 0,
+                    borderRadius: 0, // sharp corners
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
@@ -442,7 +452,7 @@ export default function Home() {
                   style={{
                     width: "100%",
                     border: "3px solid #C7A6E5",
-                    borderRadius: 0,
+                    borderRadius: 0, // sharp corners
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
