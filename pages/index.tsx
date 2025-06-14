@@ -8,7 +8,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
         <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative p-0">
-          {/* Logo in top left corner */}
+          {/* Logo in top left corner, 4x larger, absolute */}
           <div
             className="z-30"
             style={{
@@ -16,13 +16,11 @@ export default function Home() {
               top: 0,
               left: 0,
               padding: "2vw",
-              width: "20vw",
-              height: "20vw",
-              maxWidth: "256px",
-              maxHeight: "256px",
+              width: "256px",
+              height: "256px",
+              maxWidth: "30vw",
               minWidth: "96px",
-              minHeight: "96px",
-              pointerEvents: "none",
+              pointerEvents: "none", // so it doesn't block interactions
               background: "none",
             }}
           >
@@ -37,19 +35,13 @@ export default function Home() {
           </div>
           {/* Left (text, pinkish) */}
           <div
-            className="flex flex-col justify-start md:justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20" // reduced py-8 to py-6
             style={{
               background: "#FFF7F1",
               textAlign: "center",
             }}
           >
-            <div 
-              className="hero-content w-full max-w-md mx-auto md:max-w-2xl" 
-              style={{ 
-                marginTop: "max(96px, min(20vw, 256px))",
-                paddingTop: "1rem"
-              }}
-            >
+            <div className="hero-content w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "80px" }}>
               <h1
                 className="mb-3 md:mb-6" // reduced for mobile
                 style={{
@@ -1058,7 +1050,7 @@ export default function Home() {
         }
         @media (max-height: 700px) {
           .hero-content {
-            margin-top: max(96px, min(15vw, 200px)) !important;
+            margin-top: 60px !important;
           }
           .hero-lead {
             margin-bottom: 0.35rem !important;
@@ -1072,7 +1064,7 @@ export default function Home() {
         }
         @media (max-height: 600px) {
           .hero-content {
-            margin-top: max(96px, min(12vw, 180px)) !important;
+            margin-top: 50px !important;
           }
           .hero-lead {
             margin-bottom: 0.25rem !important;
