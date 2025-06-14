@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import { BookingWidget } from "@/components/BookingWidget";
 
 export default function Home() {
   return (
@@ -999,14 +1000,11 @@ export default function Home() {
                   display: "block",
                 }}
               >
-                <div
-                  id="booksy-widget-container"
-                  style={{
-                    width: "100%",
-                    background: "transparent",
-                    display: "block",
-                  }}
-                ></div>
+                <BookingWidget 
+                  width="400px"
+                  height="500px"
+                  className="mt-2 mb-2"
+                />
               </div>
             </div>
             {/* Middle column */}
@@ -1187,11 +1185,6 @@ export default function Home() {
       `}</style>
       {/* Booksy widget script */}
       <script
-        type="text/javascript"
-        src="https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl"
-        async
-      ></script>
-      <script
         dangerouslySetInnerHTML={{
           __html: `
             window.addEventListener('DOMContentLoaded', function() {
@@ -1203,6 +1196,13 @@ export default function Home() {
                   lang: 'pl'
                 });
               }
+            });
+          `,
+        }}
+      />
+    </>
+  );
+}
             });
           `,
         }}
