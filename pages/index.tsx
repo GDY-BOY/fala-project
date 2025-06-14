@@ -959,72 +959,80 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
+          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24 py-8 md:py-0"
           style={{ background: "#F8F4F1" }}
         >
-          <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-            {/* Left column */}
-            <div>
-              <h2
-                style={{
-                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
-                  fontSize: "clamp(2.5rem, 5vw, 4rem)",
-                  fontWeight: 900,
-                  color: "#386641",
-                  letterSpacing: "-2px",
-                  lineHeight: "1",
-                  marginBottom: "2rem",
-                }}
-              >
-                KONTAKT
-              </h2>
-              
-              <div className="text-[#444] mb-4" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-                <div className="text-xl md:text-2xl">Agata Kępa</div>
-                <div className="text-xl md:text-2xl">+48 695 296 763</div>
-                <div className="text-xl md:text-2xl mt-6">Gdynia</div>
-                <div className="text-xl md:text-2xl">ul. Kilińskiego 12/2</div>
+          <div className="w-full max-w-6xl flex flex-col">
+            <h2
+              className="mb-12 md:mb-16"
+              style={{
+                fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontWeight: 900,
+                color: "#386641",
+                letterSpacing: "-2px",
+                lineHeight: "1",
+              }}
+            >
+              KONTAKT
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+              {/* Left column - Address and Booksy */}
+              <div className="space-y-8">
+                <div className="text-[#444]" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                  <div className="text-xl md:text-2xl">Agata Kępa</div>
+                  <div className="text-xl md:text-2xl">+48 695 296 763</div>
+                  <div className="text-xl md:text-2xl mt-6">Gdynia</div>
+                  <div className="text-xl md:text-2xl">ul. Kilińskiego 12/2</div>
+                </div>
+                
+                <div className="w-full max-w-[300px]">
+                  <BookingWidget 
+                    width="100%"
+                    height="150px"
+                  />
+                </div>
               </div>
-              
-              <BookingWidget />
-            </div>
 
-            {/* Right column */}
-            <div className="flex flex-col">
-              <div className="text-[#444] text-xl md:text-2xl mb-8" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-                <div>falafizjo@gmail.com</div>
-              </div>
-              
-              {/* Social links */}
-              <div className="flex flex-col space-y-4">
-                <a 
-                  href="https://www.instagram.com/agata.falafizjo/?hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 group"
-                >
-                  <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                  <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
-                    Obserwuj na Instagramie
-                  </span>
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61576770137381"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 group"
-                >
-                  <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                  <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
-                    Polub na Facebooku
-                  </span>
-                </a>
+              {/* Right column - Email and Social */}
+              <div className="space-y-8">
+                <div className="text-[#444] text-xl md:text-2xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                  <div>falafizjo@gmail.com</div>
+                </div>
+
+                <div className="flex flex-col space-y-4">
+                  <a 
+                    href="https://www.instagram.com/agata.falafizjo/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
+                      Obserwuj na Instagramie
+                    </span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61576770137381"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
+                      Polub na Facebooku
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Mini logo */}
-          <div className="absolute right-4 md:right-8 bottom-4 md:bottom-8">
+          <div
+            className="absolute right-4 md:right-8 bottom-4 md:bottom-8"
+          >
             <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
           </div>
         </section>
@@ -1150,14 +1158,6 @@ export default function Home() {
         }
 
         @media (min-width: 1200px) {
-          .section-content {
-            max-width: 80%;
-          }
-        }
-      `}</style>
-    </>
-  );
-}
           .section-content {
             max-width: 80%;
           }
