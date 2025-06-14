@@ -8,7 +8,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-start w-full overflow-y-auto font-sans" style={{ fontFamily: "'Inter', Arial, sans-serif" }}>
         {/* Hero Section */}
         <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative p-0">
-          {/* Logo in top left corner, 4x larger, absolute */}
+          {/* Logo in top left corner */}
           <div
             className="z-30"
             style={{
@@ -16,11 +16,11 @@ export default function Home() {
               top: 0,
               left: 0,
               padding: "2vw",
-              width: "256px",
-              height: "256px",
+              width: "clamp(96px, 20vw, 256px)", // dynamic scaling between min and max
+              height: "clamp(96px, 20vw, 256px)", // dynamic scaling between min and max
               maxWidth: "30vw",
               minWidth: "96px",
-              pointerEvents: "none", // so it doesn't block interactions
+              pointerEvents: "none",
               background: "none",
             }}
           >
