@@ -959,8 +959,8 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24 py-8 md:py-0"
-          style={{ background: "#F8F4F1" }}
+          className="w-full py-16 md:py-24 flex flex-col items-center px-4 md:px-24" // removed h-screen and min-h-screen
+          style={{ background: "#F8F4F1", position: "relative" }}
         >
           <div className="w-full max-w-6xl flex flex-col">
             <h2
@@ -979,8 +979,8 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
               {/* Left column - Address and Booksy */}
-              <div className="space-y-8">
-                <div className="text-[#444]" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+              <div>
+                <div className="text-[#444] mb-8" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
                   <div className="text-xl md:text-2xl">Agata Kępa</div>
                   <div className="text-xl md:text-2xl">+48 695 296 763</div>
                   <div className="text-xl md:text-2xl mt-6">Gdynia</div>
@@ -994,7 +994,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-
+              
               {/* Right column - Email and Social */}
               <div className="space-y-8">
                 <div className="text-[#444] text-xl md:text-2xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
