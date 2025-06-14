@@ -480,17 +480,17 @@ export default function Home() {
         >
           {/* Left (text) */}
           <div
-            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
+            className="flex flex-col justify-start md:justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
             style={{
               background: "#9BAF8B",
               textAlign: "left",
-              justifyContent: "flex-end", // move content down on mobile
+              paddingTop: "4rem",
             }}
           >
             <div
-              className="w-full max-w-2xl mx-auto"
+              className="w-full max-w-2xl mx-auto mt-8 md:mt-0"
               style={{
-                paddingTop: "2.5rem", // add extra top padding on mobile
+                paddingTop: "0.5rem",
                 paddingBottom: "0.5rem",
               }}
             >
@@ -783,12 +783,8 @@ export default function Home() {
           #fizjoterapia-sportowa-section > .md\\:flex {
             display: none !important;
           }
-          /* Move fizjoterapia sportowa text block down */
           #fizjoterapia-sportowa-section > div:first-child {
-            justify-content: flex-end !important;
-          }
-          #fizjoterapia-sportowa-section > div:first-child > div {
-            padding-top: 2.5rem !important;
+            padding-top: 4rem !important;
           }
         }
       `}</style>
