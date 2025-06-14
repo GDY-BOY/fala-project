@@ -347,17 +347,133 @@ export default function Home() {
         </section>
 
         {/* Usługi Section */}
-        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
-          <span className="text-[#6A994E] font-bold text-2xl mb-8 uppercase tracking-widest" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>usługi</span>
-          <div className="grid gap-4 w-full max-w-md">
-            <button className="border border-[#A984C4] px-6 py-2 rounded text-[#6A994E] font-semibold text-lg bg-white hover:bg-[#A984C4] hover:text-white transition">FIZJOTERAPIA SPORTOWA</button>
-            <button className="border border-[#A984C4] px-6 py-2 rounded text-[#6A994E] font-semibold text-lg bg-white hover:bg-[#A984C4] hover:text-white transition">FIZJOTERAPIA ORTOPEDYCZNA</button>
-            <button className="border border-[#A984C4] px-6 py-2 rounded text-[#6A994E] font-semibold text-lg bg-white hover:bg-[#A984C4] hover:text-white transition">MASAŻ SPORTOWY</button>
+        <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0" style={{ background: "#FFF7F1" }}>
+          {/* Left (title + buttons) */}
+          <div
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-0 py-4 md:py-0 z-20"
+            style={{
+              background: "#FFF7F1",
+              textAlign: "left",
+            }}
+          >
+            <div className="w-full max-w-xl mx-auto flex flex-col items-start md:items-start">
+              <span
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "3rem",
+                  color: "#386641",
+                  letterSpacing: "-2px",
+                  lineHeight: "1",
+                  display: "block",
+                  marginBottom: "2.5rem",
+                }}
+              >
+                usługi
+              </span>
+              <div className="flex flex-col gap-8 w-full">
+                <button
+                  className="uslugi-btn"
+                  style={{
+                    width: "100%",
+                    border: "3px solid #C7A6E5",
+                    borderRadius: 0,
+                    background: "transparent",
+                    color: "#C7A6E5",
+                    fontWeight: 700,
+                    fontSize: "2rem",
+                    padding: "1.2rem 0",
+                    textAlign: "center",
+                    letterSpacing: "1px",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                  onClick={() => {
+                    const el = document.getElementById("fizjoterapia-sportowa-section");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  FIZJOTERAPIA SPORTOWA
+                </button>
+                <button
+                  className="uslugi-btn"
+                  style={{
+                    width: "100%",
+                    border: "3px solid #C7A6E5",
+                    borderRadius: 0,
+                    background: "transparent",
+                    color: "#C7A6E5",
+                    fontWeight: 700,
+                    fontSize: "2rem",
+                    padding: "1.2rem 0",
+                    textAlign: "center",
+                    letterSpacing: "1px",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                  onClick={() => {
+                    const el = document.getElementById("fizjoterapia-ortopedyczna-section");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  FIZJOTERAPIA ORTOPEDYCZNA
+                </button>
+                <button
+                  className="uslugi-btn"
+                  style={{
+                    width: "100%",
+                    border: "3px solid #C7A6E5",
+                    borderRadius: 0,
+                    background: "transparent",
+                    color: "#C7A6E5",
+                    fontWeight: 700,
+                    fontSize: "2rem",
+                    padding: "1.2rem 0",
+                    textAlign: "center",
+                    letterSpacing: "1px",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                  onClick={() => {
+                    const el = document.getElementById("masaz-sportowy-section");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  MASAŻ SPORTOWY
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Right (logo) */}
+          <div
+            className="flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#FFF7F1",
+            }}
+          >
+            <div
+              className="flex items-center justify-center w-full h-full"
+              style={{
+                minHeight: 200,
+              }}
+            >
+              <Image
+                src="/images/fala_logo.png"
+                alt="Fala Fizjo Logo"
+                width={420}
+                height={180}
+                style={{
+                  width: "70%",
+                  height: "auto",
+                  maxWidth: 420,
+                  minWidth: 180,
+                  display: "block",
+                }}
+                priority
+              />
+            </div>
           </div>
         </section>
-        
+
         {/* Fizjoterapia sportowa */}
-        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
+        <section id="fizjoterapia-sportowa-section" className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Fizjoterapia sportowa
@@ -376,7 +492,7 @@ export default function Home() {
         </section>
 
         {/* Fizjoterapia ortopedyczna */}
-        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
+        <section id="fizjoterapia-ortopedyczna-section" className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Fizjoterapia ortopedyczna
@@ -394,7 +510,7 @@ export default function Home() {
         </section>
 
         {/* Masaż sportowy */}
-        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
+        <section id="masaz-sportowy-section" className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <div className="w-full max-w-3xl flex flex-col items-center">
             <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
               Masaż sportowy
@@ -575,13 +691,9 @@ export default function Home() {
             padding-left: 1rem !important;
             margin-bottom: 0.5rem !important;
           }
-          /* Fala section text squeeze on mobile */
-          .fala-section-text {
+          .uslugi-btn {
             font-size: 1.1rem !important;
-            line-height: 1.6rem !important;
-            margin-bottom: 1.2rem !important;
-            padding-top: 0.5rem !important;
-            padding-bottom: 0.5rem !important;
+            padding: 0.7rem 0 !important;
           }
         }
       `}</style>
