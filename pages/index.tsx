@@ -959,63 +959,50 @@ export default function Home() {
         {/* Kontakt */}
         <section
           id="kontakt-section"
-          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24"
-          style={{ background: "#F8F4F1", position: "relative" }}
+          className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24 py-8 md:py-0"
+          style={{ background: "#F8F4F1" }}
         >
-          <div className="relative w-full max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
-            {/* Left column */}
-            <div className="flex-1 flex flex-col items-start" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-              <span
-                className="mb-8"
-                style={{
-                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
-                  fontWeight: 900,
-                  fontSize: "3rem",
-                  color: "#386641",
-                  letterSpacing: "-2px",
-                  lineHeight: "1",
-                  display: "block",
-                }}
-              >
-                KONTAKT
-              </span>
-              <div className="mb-8 text-[#444] text-xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-                <div>Agata Kępa</div>
-                <div>+48 695 296 763</div>
-                <div className="mt-6">Gdynia</div>
-                <div>ul. Kilińskiego 12/2</div>
-              </div>
-              {/* Booksy widget below address, blending with background */}
-              <div
-                className="w-full flex justify-start"
-                style={{
-                  background: "transparent",
-                  borderRadius: 0,
-                  boxShadow: "none",
-                  padding: 0,
-                  maxWidth: 400,
-                  minWidth: 220,
-                  marginTop: "0.5rem",
-                  marginBottom: "0.5rem",
-                  display: "block",
-                }}
-              >
-                <BookingWidget 
-                  width="400px"
-                  height="500px"
-                  className="mt-2 mb-2"
-                />
-              </div>
-            </div>
-            {/* Middle column */}
-            <div className="flex-1 flex flex-col items-start md:items-center md:justify-center mt-8 md:mt-0" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
-              <div className="mb-8 text-[#444] text-xl">
-                <div>
-                  <span className="block">falafizjo@gmail.com</span>
+          <div className="w-full max-w-6xl">
+            <h2
+              className="mb-12 md:mb-16"
+              style={{
+                fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontWeight: 900,
+                color: "#386641",
+                letterSpacing: "-2px",
+                lineHeight: "1",
+              }}
+            >
+              KONTAKT
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+              {/* Left column */}
+              <div className="flex flex-col space-y-6">
+                <div className="text-[#444] space-y-2" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                  <div className="text-xl md:text-2xl">Agata Kępa</div>
+                  <div className="text-xl md:text-2xl">+48 695 296 763</div>
+                  <div className="text-xl md:text-2xl mt-6">Gdynia</div>
+                  <div className="text-xl md:text-2xl">ul. Kilińskiego 12/2</div>
+                </div>
+                
+                <div className="mt-4">
+                  <BookingWidget 
+                    width="100%"
+                    height="120px"
+                    className="max-w-[300px]"
+                  />
                 </div>
               </div>
-              <div className="flex flex-col gap-4 text-[#444] text-xl">
-                <div className="flex items-center gap-3">
+
+              {/* Right column */}
+              <div className="flex flex-col space-y-6">
+                <div className="text-[#444] text-xl md:text-2xl" style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}>
+                  <div>falafizjo@gmail.com</div>
+                </div>
+
+                <div className="flex flex-col space-y-4">
                   <a 
                     href="https://www.instagram.com/agata.falafizjo/?hl=en"
                     target="_blank"
@@ -1023,12 +1010,10 @@ export default function Home() {
                     className="flex items-center gap-3 group"
                   >
                     <Image src="/images/instagram.png" alt="Instagram" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641] cursor-pointer">
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
                       Obserwuj na Instagramie
                     </span>
                   </a>
-                </div>
-                <div className="flex items-center gap-3">
                   <a
                     href="https://www.facebook.com/profile.php?id=61576770137381"
                     target="_blank"
@@ -1036,7 +1021,7 @@ export default function Home() {
                     className="flex items-center gap-3 group"
                   >
                     <Image src="/images/facebook.png" alt="Facebook" width={32} height={32} className="group-hover:opacity-80 transition-opacity" />
-                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641] cursor-pointer">
+                    <span className="text-[#444] group-hover:text-[#386641] transition-colors font-semibold underline underline-offset-4 decoration-[#A984C4] hover:decoration-[#386641]">
                       Polub na Facebooku
                     </span>
                   </a>
@@ -1044,14 +1029,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* Mini logo in bottom right of Kontakt section only */}
+
+          {/* Mini logo */}
           <div
-            style={{
-              position: "absolute",
-              right: "min(2vw, 24px)",
-              bottom: "min(2vw, 24px)",
-              zIndex: 40,
-            }}
+            className="absolute right-4 md:right-8 bottom-4 md:bottom-8"
           >
             <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
           </div>

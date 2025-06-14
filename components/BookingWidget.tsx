@@ -6,9 +6,8 @@ interface BookingWidgetProps {
   className?: string;
 }
 
-export const BookingWidget = ({ width = "100%", height = "600px", className = "" }: BookingWidgetProps) => {
+export const BookingWidget = ({ width = "300px", height = "120px", className = "" }: BookingWidgetProps) => {
   useEffect(() => {
-    // Initialize Booksy widget after component mounts
     if (window.BooksyWidget) {
       window.BooksyWidget.init({
         container: '#booksy-widget-container',
@@ -27,6 +26,7 @@ export const BookingWidget = ({ width = "100%", height = "600px", className = ""
         height,
         overflow: 'hidden',
         position: 'relative',
+        background: 'transparent',
       }}
     >
       <div
