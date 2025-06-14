@@ -258,6 +258,87 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Fala Section */}
+        <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0">
+          {/* Left (text) */}
+          <div
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-0 py-10 md:py-0 z-20"
+            style={{
+              background: "#fff",
+              textAlign: "left",
+            }}
+          >
+            <div className="w-full max-w-xl mx-auto">
+              <p
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  fontSize: "2rem",
+                  fontWeight: 400,
+                  color: "#222426",
+                  lineHeight: "2.7rem",
+                  marginBottom: "2.5rem",
+                }}
+              >
+                <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
+              </p>
+              <button
+                className="border-2 border-[#A984C4] px-10 py-2 rounded-lg transition text-[#A984C4] font-bold text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
+                style={{
+                  background: "transparent",
+                  boxShadow: "none",
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  marginTop: "1.5rem",
+                  marginBottom: "1.5rem",
+                  width: 160,
+                  height: 54,
+                  display: "block",
+                  textAlign: "center",
+                  letterSpacing: "0.5px",
+                }}
+              >
+                usługi
+              </button>
+            </div>
+          </div>
+          {/* Right (image, arch crop, yellow bg) */}
+          <div
+            className="flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#F8E1B4",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "240px",
+                borderTopRightRadius: "240px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#F8E1B4",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/8.jpeg"
+                alt="Fala"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Usługi Section */}
         <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
           <span className="text-[#6A994E] font-bold text-2xl mb-8 uppercase tracking-widest" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>usługi</span>
