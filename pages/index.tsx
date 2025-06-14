@@ -320,10 +320,12 @@ export default function Home() {
                   marginBottom: "1rem",
                   width: 130,
                   height: 44,
-                  display: "block",
+                  display: "flex", // changed from "block"
+                  alignItems: "center",
+                  justifyContent: "center",
                   textAlign: "center",
                   letterSpacing: "0.5px",
-                  borderRadius: 0, // sharp corners
+                  borderRadius: 0,
                 }}
                 onClick={() => {
                   const el = document.getElementById("uslugi-section");
