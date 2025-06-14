@@ -35,13 +35,13 @@ export default function Home() {
           </div>
           {/* Left (text, pinkish) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-12 md:py-0 z-20"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20" // reduced py-8 to py-6
             style={{
               background: "#FFF7F1",
               textAlign: "center",
             }}
           >
-            <div className="w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "100px" }}>
+            <div className="hero-content w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "80px" }}>
               <h1
                 className="mb-3 md:mb-6" // reduced for mobile
                 style={{
@@ -1046,6 +1046,34 @@ export default function Home() {
           }
           #fizjoterapia-sportowa-section > div:first-child {
             padding-top: 4rem !important;
+          }
+        }
+        @media (max-height: 700px) {
+          .hero-content {
+            margin-top: 60px !important;
+          }
+          .hero-lead {
+            margin-bottom: 0.35rem !important;
+            font-size: 0.9rem !important;
+          }
+          h1 {
+            margin-bottom: 0.5rem !important;
+            font-size: 2rem !important;
+            line-height: 2.4rem !important;
+          }
+        }
+        @media (max-height: 600px) {
+          .hero-content {
+            margin-top: 50px !important;
+          }
+          .hero-lead {
+            margin-bottom: 0.25rem !important;
+            font-size: 0.85rem !important;
+          }
+          h1 {
+            margin-bottom: 0.35rem !important;
+            font-size: 1.8rem !important;
+            line-height: 2.2rem !important;
           }
         }
       `}</style>
