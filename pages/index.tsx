@@ -43,7 +43,7 @@ export default function Home() {
           >
             <div className="w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "100px" }}>
               <h1
-                className="mb-4 md:mb-6" // reduced from mb-8
+                className="mb-3 md:mb-6" // reduced for mobile
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontSize: "2.2rem",
@@ -57,10 +57,10 @@ export default function Home() {
               </h1>
               <div
                 style={{ fontFamily: "'DM Sans', Arial, sans-serif", textAlign: "left" }}
-                className="md:text-[2.2rem] md:leading-tight md:mb-8" // reduced from mb-16
+                className="md:text-[2.2rem] md:leading-tight md:mb-8"
               >
                 <p
-                  className="mb-3 hero-lead" // reduced from mb-6
+                  className="mb-2 md:mb-3 hero-lead" // reduced for mobile
                   style={{
                     fontSize: "1rem",
                     fontWeight: 500,
@@ -71,7 +71,7 @@ export default function Home() {
                   Boli Cię?
                 </p>
                 <p
-                  className="mb-3 hero-lead" // reduced from mb-6
+                  className="mb-2 md:mb-3 hero-lead" // reduced for mobile
                   style={{
                     fontSize: "1rem",
                     fontWeight: 500,
@@ -82,7 +82,7 @@ export default function Home() {
                   Chcesz bezpiecznie wrócić do sportu?
                 </p>
                 <p
-                  className="mb-4 font-semibold italic hero-lead" // reduced from mb-6
+                  className="mb-3 md:mb-4 font-semibold italic hero-lead" // reduced for mobile
                   style={{
                     fontSize: "0.95rem",
                     color: "#386641",
