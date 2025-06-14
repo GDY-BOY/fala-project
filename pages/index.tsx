@@ -265,12 +265,12 @@ export default function Home() {
                   padding: "0.5rem 0",
                 }}
               >
-                <p className="mb-3 md:mb-4" style={{ fontWeight: 500 }}>
+                <p className="mb-3 md:mb-4 czesc-text" style={{ fontWeight: 500 }}>
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
                   Doświadczenie w zawodzie zdobywałam współpracując z:
                 </p>
                 <ul
-                  className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets"
+                  className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets czesc-text"
                   style={{ fontSize: "0.97rem" }}
                 >
                   <li>
@@ -1074,20 +1074,22 @@ export default function Home() {
             margin-top: 2.2rem !important;
             margin-bottom: 1.2rem !important;
           }
-          .section-content {
-            font-size: 0.97rem !important;
-            padding-left: 0.5rem !important;
-            padding-right: 0.5rem !important;
-            max-width: 98vw !important;
-            word-break: break-word;
+          .cześć-bullets {
+            font-size: 0.68rem !important;
+            line-height: 1.1rem !important;
+            padding-left: 1rem !important;
+            margin-bottom: 0.5rem !important;
           }
-        }
-        @media (max-width: 400px) {
-          .section-content {
-            font-size: 0.89rem !important;
-            padding-left: 0.2rem !important;
-            padding-right: 0.2rem !important;
-            max-width: 99vw !important;
+          .uslugi-btn {
+            font-size: 1.1rem !important;
+            padding: 0.7rem 0 !important;
+          }
+          /* Hide image in fizjoterapia sportowa section on mobile */
+          #fizjoterapia-sportowa-section > .md\\:flex {
+            display: none !important;
+          }
+          #fizjoterapia-sportowa-section > div:first-child {
+            padding-top: 4rem !important;
           }
         }
         @media (max-height: 700px) {
@@ -1151,6 +1153,17 @@ export default function Home() {
             max-width: 80%;
           }
         }
+
+        @media (max-width: 380px) {
+          .czesc-text {
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+          }
+          .cześć-bullets {
+            font-size: 0.85rem !important;
+            padding-bottom: 1rem !important;
+          }
+        }
       `}</style>
       {/* Booksy widget script */}
       <script
@@ -1175,7 +1188,5 @@ export default function Home() {
         }}
       />
     </>
-  );
-}
   );
 }
