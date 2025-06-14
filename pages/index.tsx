@@ -948,7 +948,7 @@ export default function Home() {
         <section
           id="kontakt-section"
           className="w-full min-h-screen h-screen flex flex-col justify-center items-center px-4 md:px-24 py-8 md:py-0"
-          style={{ background: "#F8F4F1" }}
+          style={{ background: "#F8F4F1", position: "relative" }}  // Add position relative
         >
           <div className="w-full max-w-6xl flex flex-col">
             <h2
@@ -1016,7 +1016,12 @@ export default function Home() {
 
           {/* Mini logo */}
           <div
-            className="absolute right-4 md:right-8 bottom-4 md:bottom-8"
+            style={{
+              position: "absolute",
+              right: "min(2vw, 24px)",
+              bottom: "min(2vw, 24px)",
+              zIndex: 40,
+            }}
           >
             <Image src="/images/fala_mini_logo.png" alt="Fala Mini Logo" width={90} height={90} />
           </div>
