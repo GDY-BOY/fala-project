@@ -1147,6 +1147,23 @@ export default function Home() {
             max-width: 80%;
           }
         }
+
+        /* Add universal button hover styles */
+        .uslugi-btn:hover {
+          background-color: #C7A6E5 !important;
+          color: white !important;
+        }
+
+        button[class*="border-[#A984C4]"]:hover {
+          background-color: #C7A6E5 !important;
+          color: white !important;
+        }
+
+        /* Override any conflicting hover styles */
+        .hover\:bg-\[#A984C4\]:hover {
+          background-color: #C7A6E5 !important;
+          color: white !important;
+        }
       `}</style>
     </>
   );
