@@ -35,12 +35,26 @@ export default function Home() {
           </div>
           {/* Left (text, pinkish) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20" // reduced py-8 to py-6
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20 relative" // added relative
             style={{
               background: "#FFF7F1",
               textAlign: "center",
             }}
           >
+            {/* Phone number - visible only on mobile */}
+            <div
+              className="absolute z-20 font-normal md:hidden"
+              style={{
+                top: "2vw",
+                right: "2vw",
+                color: "#222",
+                letterSpacing: "1px",
+                fontSize: "1.08rem", // reduced from 1.2rem
+                fontWeight: 400,
+              }}
+            >
+              <span className="phone-number">+48 695 296 763</span>
+            </div>
             <div className="hero-content w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "80px" }}>
               <h1
                 className="mb-3 md:mb-6" // reduced for mobile
@@ -115,15 +129,15 @@ export default function Home() {
               overflow: "hidden",
             }}
           >
-            {/* Phone number in top right, always visible */}
+            {/* Phone number - visible only on desktop */}
             <div
-              className="absolute z-20 font-normal"
+              className="absolute z-20 font-normal hidden md:block"
               style={{
                 top: "2vw",
                 right: "2vw",
                 color: "#222",
                 letterSpacing: "1px",
-                fontSize: "1.2rem",
+                fontSize: "1.08rem", // reduced from 1.2rem
                 fontWeight: 400,
               }}
             >
@@ -1026,7 +1040,7 @@ export default function Home() {
             padding-bottom: 0.75rem !important;
           }
           .phone-number {
-            font-size: 2.4rem !important;
+            font-size: 2.16rem !important; // reduced from 2.4rem
           }
         }
         @media (max-width: 767px) {
