@@ -41,9 +41,9 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <div className="w-full max-w-md mx-auto md:max-w-2xl">
+            <div className="w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "100px" }}>
               <h1
-                className="mb-8 md:mb-8"
+                className="mb-4 md:mb-6" // reduced from mb-8
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontSize: "2.2rem",
@@ -57,10 +57,10 @@ export default function Home() {
               </h1>
               <div
                 style={{ fontFamily: "'DM Sans', Arial, sans-serif", textAlign: "left" }}
-                className="md:text-[2.2rem] md:leading-tight md:mb-16"
+                className="md:text-[2.2rem] md:leading-tight md:mb-8" // reduced from mb-16
               >
                 <p
-                  className="mb-6 hero-lead"
+                  className="mb-3 hero-lead" // reduced from mb-6
                   style={{
                     fontSize: "1rem",
                     fontWeight: 500,
@@ -71,7 +71,7 @@ export default function Home() {
                   Boli Cię?
                 </p>
                 <p
-                  className="mb-6 hero-lead"
+                  className="mb-3 hero-lead" // reduced from mb-6
                   style={{
                     fontSize: "1rem",
                     fontWeight: 500,
@@ -82,7 +82,7 @@ export default function Home() {
                   Chcesz bezpiecznie wrócić do sportu?
                 </p>
                 <p
-                  className="mb-6 font-semibold italic hero-lead"
+                  className="mb-4 font-semibold italic hero-lead" // reduced from mb-6
                   style={{
                     fontSize: "0.95rem",
                     color: "#386641",
@@ -241,7 +241,7 @@ export default function Home() {
                   style={{ color: "#222426", fontSize: "0.97rem" }}
                 >
                   <li>
-                    <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
+                    <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzost Świata i Europy,
                   </li>
                   <li>
                     Byłam członkinią sztabu medycznego podczas <span className="font-bold">Igrzysk Olimpijskich</span> w Paryżu w 2024 roku.
@@ -369,7 +369,7 @@ export default function Home() {
                   marginBottom: "2.5rem",
                 }}
               >
-                usługi
+                Usługi
               </span>
               <div className="flex flex-col gap-8 w-full">
                 <button
