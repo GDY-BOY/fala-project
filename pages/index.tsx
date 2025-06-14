@@ -576,20 +576,105 @@ export default function Home() {
         </section>
 
         {/* Fizjoterapia ortopedyczna */}
-        <section id="fizjoterapia-ortopedyczna-section" className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
-          <div className="w-full max-w-3xl flex flex-col items-center">
-            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
-              Fizjoterapia ortopedyczna
-            </h3>
-            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
-              Dla osób po urazach, operacjach, a także tych, którzy zmagają się z bólem lub ograniczeniem ruchomości. Pomagam zrozumieć źródło problemu i pokazuję, co robić, by wrócić na zaplanowaną drogę, która kończy się odzyskaniem sprawności.
-            </p>
-            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
-              <li>terapia manualna</li>
-              <li>ćwiczenia funkcjonalno-powięziowe</li>
-              <li>suche igłowanie</li>
-              <li>kinesio taping</li>
-            </ul>
+        <section
+          id="fizjoterapia-ortopedyczna-section"
+          className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0"
+          style={{ background: "#C4DAAF" }}
+        >
+          {/* Left (image, arch crop) - only on desktop */}
+          <div
+            className="hidden md:flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#C4DAAF",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "180px",
+                borderTopRightRadius: "180px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#C4DAAF",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/6.jpeg"
+                alt="Fizjoterapia ortopedyczna"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
+            </div>
+          </div>
+          {/* Right (text) */}
+          <div
+            className="flex flex-col justify-start md:justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
+            style={{
+              background: "#C4DAAF",
+              textAlign: "left",
+              paddingTop: "4rem",
+            }}
+          >
+            <div
+              className="w-full max-w-2xl mx-auto mt-8 md:mt-0"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "1.35rem",
+                  color: "#2D3924",
+                  letterSpacing: "-1px",
+                  lineHeight: "1.7rem",
+                  marginBottom: "0.7rem",
+                }}
+                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
+              >
+                Fizjoterapia ortopedyczna
+              </h2>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  fontSize: "1.08rem",
+                  color: "#fff",
+                  fontWeight: 400,
+                  lineHeight: "1.6rem",
+                  marginBottom: "1rem",
+                }}
+                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
+              >
+                <p style={{ marginBottom: "0.7rem" }}>
+                  Dla osób po urazach, operacjach, a także tych, którzy zmagają się z bólem lub ograniczeniem ruchomości. Pomogę Ci zrozumieć źródło problemu i pokażę, co robić, by wrócić na zaplanowaną drogę, która kończy się odzyskaniem sprawności.
+                </p>
+                <p style={{ marginBottom: "0.7rem" }}>
+                  W swojej pracy wykorzystuję m.in.:
+                </p>
+                <ul style={{ marginLeft: "1.1rem", marginBottom: 0, color: "#fff", fontSize: "0.98rem", lineHeight: "1.4rem", listStyleType: "disc" }} className="md:text-[1.25rem] md:leading-[2rem]">
+                  <li>terapię manualną,</li>
+                  <li>rozluźnianie mięśniowo-powięziowe,</li>
+                  <li>ćwiczenia i trening medyczny,</li>
+                  <li>suche igłowanie,</li>
+                  <li>masaż,</li>
+                  <li>kinesio taping.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
