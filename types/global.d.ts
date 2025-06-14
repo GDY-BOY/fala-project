@@ -8,5 +8,8 @@ interface Window {
       locale: string;
       isTestMode?: boolean;
     }) => void;
+    Widget?: {
+      show: () => void;
+    };
   }
 }

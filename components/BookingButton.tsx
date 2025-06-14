@@ -2,39 +2,48 @@ import { useCallback, useEffect, useState } from 'react';
 
 export const BookingButton = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    // Load Booksy script only once
-    const existingScript = document.getElementById('booksy-script');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = 'booksy-script';
-      script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
-      script.async = true;
-
-      script.onload = () => {
-        if (window.Booksy) {
+    const initializeBooksy = () => {
+      if (window.Booksy) {
+        try {
           window.Booksy.initButtonWidget({
             businessId: '300509',
             locale: 'pl',
           });
+          setIsInitialized(true);
+        } catch (error) {
+          console.error('Failed to initialize Booksy:', error);
         }
-      };
+      }
+    };
 
+    const script = document.createElement('script');
+    script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
+    script.async = true;
+    script.onload = initializeBooksy;
+
+    if (!document.querySelector('script[src*="booksy.com/widget/code.js"]')) {
       document.body.appendChild(script);
+    } else {
+      initializeBooksy();
     }
 
     return () => {
-      const script = document.getElementById('booksy-script');
-      if (script) {
-        document.body.removeChild(script);
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
       }
     };
   }, []);
 
   const handleClick = useCallback(() => {
-    if (window.Booksy?.ButtonWidget) {
+    if (window.Booksy?.ButtonWidget?.show) {
       window.Booksy.ButtonWidget.show();
+    } else {
+      console.error('Booksy widget not initialized');
+      // Fallback to direct URL
+      window.open('https://booksy.com/pl-pl/300509_fala-fizjo_massage_3_gdynia', '_blank');
     }
   }, []);
 
