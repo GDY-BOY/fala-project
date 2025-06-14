@@ -107,29 +107,21 @@ export default function Home() {
                 >
                   Wiem jak Ci pomóc!
                 </p>
+                {/* Hero section kontakt button */}
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white md:px-12 md:py-3" // matched padding with kontakt
+                  className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
                   style={{
                     background: "transparent",
                     boxShadow: "none",
-                    fontFamily: "'DM Sans', Arial, sans-serif",
-                    marginTop: "1rem",
-                    marginBottom: "1rem",
                     borderRadius: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    // removed fixed width and height to match kontakt button
+                    transition: "all 0.2s ease-in-out",
                   }}
                   onClick={() => {
                     const el = document.getElementById("kontakt-section");
                     if (el) {
                       setTimeout(() => {
-                        el.scrollIntoView({ 
-                          behavior: "smooth",
-                          block: "start"  // ensures we scroll to the top of the section
-                        });
-                      }, 100);  // small delay to ensure proper positioning
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }, 100);
                     }
                   }}
                 >
@@ -331,19 +323,14 @@ export default function Home() {
               >
                 <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
               </p>
+              {/* Fala section uslugi button */}
               <button
-                className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white md:px-12 md:py-3" // matched padding with kontakt
+                className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
                 style={{
                   background: "transparent",
                   boxShadow: "none",
-                  fontFamily: "'DM Sans', Arial, sans-serif",
-                  marginTop: "1rem",
-                  marginBottom: "1rem",
                   borderRadius: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  // removed fixed width and height to match kontakt button
+                  transition: "all 0.2s ease-in-out",
                 }}
                 onClick={() => {
                   const el = document.getElementById("uslugi-section");
@@ -436,7 +423,7 @@ export default function Home() {
                     padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
-                    transition: "background 0.2s, color 0.2s",
+                    transition: "all 0.2s ease-in-out",
                   }}
                   onClick={() => {
                     const el = document.getElementById("fizjoterapia-sportowa-section");
@@ -458,7 +445,7 @@ export default function Home() {
                     padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
-                    transition: "background 0.2s, color 0.2s",
+                    transition: "all 0.2s ease-in-out",
                   }}
                   onClick={() => {
                     const el = document.getElementById("fizjoterapia-ortopedyczna-section");
@@ -480,7 +467,7 @@ export default function Home() {
                     padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
-                    transition: "background 0.2s, color 0.2s",
+                    transition: "all 0.2s ease-in-out",
                   }}
                   onClick={() => {
                     const el = document.getElementById("masaz-sportowy-section");
@@ -502,7 +489,7 @@ export default function Home() {
                     padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
-                    transition: "background 0.2s, color 0.2s",
+                    transition: "all 0.2s ease-in-out",
                   }}
                   onClick={() => {
                     const el = document.getElementById("terapia-tecar-section");
@@ -1151,6 +1138,19 @@ export default function Home() {
           }
           
           .section-content {
+            padding: 1rem 0;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .section-content {
+            max-width: 80%;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
             padding: 1rem 0;
           }
         }
