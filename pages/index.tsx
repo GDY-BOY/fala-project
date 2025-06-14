@@ -238,21 +238,28 @@ export default function Home() {
               }}
             >
               <h2
-                className="mb-4 md:mb-6"
+                className="section-header mb-6 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
-                  fontSize: "1.5rem",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  color: "#386641",
-                  lineHeight: "2rem",
+                  color: "#2D3924",
                   letterSpacing: "-1px",
+                  lineHeight: "1.2",
                 }}
               >
                 Cześć!
               </h2>
               <div
-                style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}
-                className="text-sm md:text-lg"
+                className="section-content"
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
+                  color: "#fff",
+                  fontWeight: 400,
+                  lineHeight: "1.6",
+                  maxWidth: "90%",
+                }}
               >
                 <p className="mb-3 md:mb-4" style={{ color: "#222426", fontWeight: 500 }}>
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
@@ -528,29 +535,28 @@ export default function Home() {
               }}
             >
               <h2
+                className="section-header mb-6 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  fontSize: "1.35rem",
                   color: "#2D3924",
                   letterSpacing: "-1px",
-                  lineHeight: "1.7rem",
-                  marginBottom: "0.7rem",
+                  lineHeight: "1.2",
                 }}
-                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
                 Fizjoterapia sportowa
               </h2>
               <div
+                className="section-content"
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.08rem",
+                  fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "1.6rem",
-                  marginBottom: "1rem",
+                  lineHeight: "1.6",
+                  maxWidth: "90%",
                 }}
-                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
               >
                 <p style={{ marginBottom: "0.7rem" }}>
                   Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planując skuteczną i bezpieczną ścieżkę rehabilitacji.
@@ -668,29 +674,28 @@ export default function Home() {
               }}
             >
               <h2
+                className="section-header mb-6 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  fontSize: "1.35rem",
                   color: "#2D3924",
                   letterSpacing: "-1px",
-                  lineHeight: "1.7rem",
-                  marginBottom: "0.7rem",
+                  lineHeight: "1.2",
                 }}
-                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
                 Fizjoterapia ortopedyczna
               </h2>
               <div
+                className="section-content"
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.08rem",
+                  fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "1.6rem",
-                  marginBottom: "1rem",
+                  lineHeight: "1.6",
+                  maxWidth: "90%",
                 }}
-                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
               >
                 <p style={{ marginBottom: "0.7rem" }}>
                   Dla osób po urazach, operacjach, a także tych, którzy zmagają się z bólem lub ograniczeniem ruchomości. Pomogę Ci zrozumieć źródło problemu i pokażę, co robić, by wrócić na zaplanowaną drogę, która kończy się odzyskaniem sprawności.
@@ -734,29 +739,28 @@ export default function Home() {
               }}
             >
               <h2
+                className="section-header mb-6 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  fontSize: "1.35rem",
                   color: "#2D3924",
                   letterSpacing: "-1px",
-                  lineHeight: "1.7rem",
-                  marginBottom: "0.7rem",
+                  lineHeight: "1.2",
                 }}
-                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
                 Masaż sportowy
               </h2>
               <div
+                className="section-content"
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.08rem",
+                  fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "1.6rem",
-                  marginBottom: "1rem",
+                  lineHeight: "1.6",
+                  maxWidth: "90%",
                 }}
-                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
               >
                 <p style={{ marginBottom: "0.7rem" }}>
                   Masaż sportowy to coś więcej niż tylko przyjemne rozmasowanie zmęczonych mięśni po treningu. To świetne narzędzie dla osób aktywnych fizycznie – niezależnie od tego, czy jesteś zawodowym sportowcem, czy po prostu lubisz biegać lub ćwiczyć na siłowni.
@@ -873,29 +877,28 @@ export default function Home() {
               }}
             >
               <h2
+                className="section-header mb-6 md:mb-8"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  fontSize: "1.35rem",
                   color: "#2D3924",
                   letterSpacing: "-1px",
-                  lineHeight: "1.7rem",
-                  marginBottom: "0.7rem",
+                  lineHeight: "1.2",
                 }}
-                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
                 Terapia TECAR
               </h2>
               <div
+                className="section-content"
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.08rem",
+                  fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "1.6rem",
-                  marginBottom: "1rem",
+                  lineHeight: "1.6",
+                  maxWidth: "90%",
                 }}
-                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
               >
                 <p style={{ marginBottom: "0.7rem" }}>
                   Nowoczesna regeneracja dla aktywnych. Terapia TECAR to nowoczesna metoda fizjoterapeutyczna, która wspomaga regenerację tkanek.
@@ -1107,6 +1110,39 @@ export default function Home() {
             margin-bottom: 0.35rem !important;
             fontSize: 1.8rem !important;
             line-height: 2.2rem !important;
+          }
+        }
+
+        .section-content {
+          padding: clamp(1rem, 3vw, 2rem) 0;
+        }
+
+        .section-content p {
+          margin-bottom: 1.2em;
+        }
+
+        .section-content ul {
+          margin-left: clamp(1rem, 2vw, 1.5rem);
+          margin-bottom: 1em;
+        }
+
+        .section-content li {
+          margin-bottom: 0.5em;
+        }
+
+        @media (max-width: 768px) {
+          .section-header {
+            padding-top: 2rem;
+          }
+          
+          .section-content {
+            padding: 1rem 0;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .section-content {
+            max-width: 80%;
           }
         }
       `}</style>
