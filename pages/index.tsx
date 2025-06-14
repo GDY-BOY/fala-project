@@ -684,44 +684,7 @@ export default function Home() {
           className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0"
           style={{ background: "#9BAF8B" }}
         >
-          {/* Left (image, arch crop) - only on desktop */}
-          <div
-            className="hidden md:flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
-            style={{
-              background: "#9BAF8B",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
-              style={{
-                width: "80%",
-                height: "90%",
-                marginTop: 0,
-                marginBottom: 0,
-                borderTopLeftRadius: "180px",
-                borderTopRightRadius: "180px",
-                borderBottomLeftRadius: "0",
-                borderBottomRightRadius: "0",
-                overflow: "hidden",
-                background: "#9BAF8B",
-                clipPath: "ellipse(100% 66% at 50% 66%)",
-              }}
-            >
-              <Image
-                src="/images/2.jpeg"
-                alt="Masaż sportowy"
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center 20%",
-                }}
-                className="w-full h-full"
-                priority
-              />
-            </div>
-          </div>
-          {/* Right (text) */}
+          {/* Left (text) */}
           <div
             className="flex flex-col justify-start md:justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
             style={{
@@ -776,6 +739,43 @@ export default function Home() {
                   <li>Lepsze samopoczucie.</li>
                 </ul>
               </div>
+            </div>
+          </div>
+          {/* Right (image, arch crop) - only on desktop */}
+          <div
+            className="hidden md:flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#9BAF8B",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "180px",
+                borderTopRightRadius: "180px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#9BAF8B",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/2.jpeg"
+                alt="Masaż sportowy"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
             </div>
           </div>
         </section>
