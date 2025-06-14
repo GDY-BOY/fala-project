@@ -480,43 +480,51 @@ export default function Home() {
         >
           {/* Left (text) */}
           <div
-            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-20 py-8 md:py-0 z-20"
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-20 py-4 md:py-0 z-20"
             style={{
               background: "#9BAF8B",
               textAlign: "left",
             }}
           >
-            <div className="w-full max-w-2xl mx-auto">
+            <div
+              className="w-full max-w-2xl mx-auto"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+              }}
+            >
               <h2
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontWeight: 900,
-                  fontSize: "3rem",
+                  fontSize: "2rem",
                   color: "#2D3924",
                   letterSpacing: "-2px",
-                  lineHeight: "1.1",
-                  marginBottom: "2.2rem",
+                  lineHeight: "2.3rem",
+                  marginBottom: "1.2rem",
                 }}
+                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
                 Fizjoterapia sportowa
               </h2>
               <div
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.35rem",
+                  fontSize: "1rem",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "2.1rem",
-                  marginBottom: "1.5rem",
+                  lineHeight: "1.5rem",
+                  marginBottom: "1rem",
                 }}
+                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
               >
-                <p style={{ marginBottom: "1.2rem" }}>
+                <p style={{ marginBottom: "0.7rem" }}>
                   Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planując skuteczną i bezpieczną ścieżkę rehabilitacji.
                 </p>
-                <p style={{ marginBottom: "1.2rem" }}>
+                <p style={{ marginBottom: "0.7rem" }}>
                   Pokażę Ci, jak trenować mądrze, by uniknąć kolejnych przerw. Każdy plan opieram na indywidualnej ocenie – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to między innymi:
                 </p>
-                <ul style={{ marginLeft: "1.5rem", marginBottom: 0, color: "#fff", fontSize: "1.25rem", lineHeight: "2rem", listStyleType: "disc" }}>
+                <ul style={{ marginLeft: "1.1rem", marginBottom: 0, color: "#fff", fontSize: "0.95rem", lineHeight: "1.4rem", listStyleType: "disc" }} className="md:text-[1.25rem] md:leading-[2rem]">
                   <li>terapia manualna,</li>
                   <li>ćwiczenia i trening medyczny,</li>
                   <li>suche igłowanie,</li>
