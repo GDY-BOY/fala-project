@@ -16,9 +16,9 @@ export default function Home() {
               top: 0,
               left: 0,
               padding: "2vw",
-              width: "clamp(96px, 20vw, 256px)", // dynamic scaling between min and max
-              height: "clamp(96px, 20vw, 256px)", // dynamic scaling between min and max
-              maxWidth: "30vw",
+              width: "clamp(96px, 15vw, 200px)", // reduced from 20vw and 256px
+              height: "clamp(96px, 15vw, 200px)", // reduced from 20vw and 256px
+              maxWidth: "20vw", // reduced from 30vw
               minWidth: "96px",
               pointerEvents: "none",
               background: "none",
@@ -1072,7 +1072,7 @@ export default function Home() {
           }
           h1 {
             margin-bottom: 0.35rem !important;
-            font-size: 1.8rem !important;
+            fontSize: 1.8rem !important;
             line-height: 2.2rem !important;
           }
         }
