@@ -484,12 +484,13 @@ export default function Home() {
             style={{
               background: "#9BAF8B",
               textAlign: "left",
+              justifyContent: "flex-end", // move content down on mobile
             }}
           >
             <div
               className="w-full max-w-2xl mx-auto"
               style={{
-                paddingTop: "0.5rem",
+                paddingTop: "2.5rem", // add extra top padding on mobile
                 paddingBottom: "0.5rem",
               }}
             >
@@ -781,6 +782,13 @@ export default function Home() {
           /* Hide image in fizjoterapia sportowa section on mobile */
           #fizjoterapia-sportowa-section > .md\\:flex {
             display: none !important;
+          }
+          /* Move fizjoterapia sportowa text block down */
+          #fizjoterapia-sportowa-section > div:first-child {
+            justify-content: flex-end !important;
+          }
+          #fizjoterapia-sportowa-section > div:first-child > div {
+            padding-top: 2.5rem !important;
           }
         }
       `}</style>
