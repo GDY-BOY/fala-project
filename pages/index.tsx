@@ -162,26 +162,89 @@ export default function Home() {
         </section>
 
         {/* Cześć Section */}
-        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
-          <div className="w-full max-w-5xl grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col items-center md:items-start">
-              <div className="rounded-full overflow-hidden w-60 h-60 mb-6 border-8 border-[#F8E1B4]">
-                <Image src="/images/profile.jpeg" width={400} height={400} alt="Profile" className="object-cover w-full h-full" />
-              </div>
-              <span className="text-[#386641] font-bold text-3xl" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>Cześć!</span>
+        <section className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col md:flex-row relative px-0">
+          {/* Left (image, arch crop) */}
+          <div
+            className="flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#F8F8F8",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "240px",
+                borderTopRightRadius: "240px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#F8F8F8",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/4.jpeg"
+                alt="Cześć"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
             </div>
-            <div>
-              <p className="mb-4" style={{ fontSize: "1.1rem", fontWeight: 500 }}>
-                Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
-                Doświadczenie w zawodzie zdobywałam współpracując z:
-              </p>
-              <ul className="mb-4 list-disc pl-6" style={{ fontSize: "1.1rem" }}>
-                <li>Polskim Związkiem Lekkoatletyki</li>
-                <li>Kliniką Rehasport w Gdańsku</li>
-              </ul>
-              <p className="mb-2" style={{ fontSize: "1.1rem" }}>
-                Fala Fizjo to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
-              </p>
+          </div>
+          {/* Right (text) */}
+          <div
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-12 md:py-0 z-20"
+            style={{
+              background: "#F8F8F8",
+              textAlign: "left",
+            }}
+          >
+            <div className="w-full max-w-2xl mx-auto">
+              <h2
+                className="mb-6"
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontSize: "2.5rem",
+                  fontWeight: 900,
+                  color: "#386641",
+                  lineHeight: "3rem",
+                  letterSpacing: "-1px",
+                }}
+              >
+                Cześć!
+              </h2>
+              <div
+                style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}
+                className="text-base md:text-lg"
+              >
+                <p className="mb-4" style={{ color: "#222426", fontWeight: 500 }}>
+                  Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
+                  Doświadczenie w zawodzie zdobywałam współpracując z:
+                </p>
+                <ul className="mb-4 list-disc pl-6" style={{ color: "#222426", fontSize: "1.1rem" }}>
+                  <li>
+                    <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
+                  </li>
+                  <li>
+                    Byłam członkinią sztabu medycznego podczas <span className="font-bold">Igrzysk Olimpijskich</span> w Paryżu w 2024 roku.
+                  </li>
+                  <li>
+                    Kliniką <span className="font-bold">Rehasport</span> w Gdańsku,
+                  </li>
+                  <li>
+                    Swoją wiedzą i doświadczeniem dzielę się ze studentami <span className="font-bold">Wyższej Szkoły Zdrowia</span> w Gdańsku, prowadząc zajęcia z Programowania Fizjoterapii w Medycynie Sportowej oraz z Regeneracji i Odnowy Biologicznej na kierunkach Fizjoterapia oraz Trener Medyczny.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
