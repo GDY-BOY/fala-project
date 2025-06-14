@@ -1074,22 +1074,20 @@ export default function Home() {
             margin-top: 2.2rem !important;
             margin-bottom: 1.2rem !important;
           }
-          .cześć-bullets {
-            font-size: 0.68rem !important;
-            line-height: 1.1rem !important;
-            padding-left: 1rem !important;
-            margin-bottom: 0.5rem !important;
+          .section-content {
+            font-size: 0.97rem !important;
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+            max-width: 98vw !important;
+            word-break: break-word;
           }
-          .uslugi-btn {
-            font-size: 1.1rem !important;
-            padding: 0.7rem 0 !important;
-          }
-          /* Hide image in fizjoterapia sportowa section on mobile */
-          #fizjoterapia-sportowa-section > .md\\:flex {
-            display: none !important;
-          }
-          #fizjoterapia-sportowa-section > div:first-child {
-            padding-top: 4rem !important;
+        }
+        @media (max-width: 400px) {
+          .section-content {
+            font-size: 0.89rem !important;
+            padding-left: 0.2rem !important;
+            padding-right: 0.2rem !important;
+            max-width: 99vw !important;
           }
         }
         @media (max-height: 700px) {
@@ -1177,5 +1175,7 @@ export default function Home() {
         }}
       />
     </>
+  );
+}
   );
 }
