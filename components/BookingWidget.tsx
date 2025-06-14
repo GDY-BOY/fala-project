@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useId } from 'react';
 
 interface BookingWidgetProps {
   width?: string;
@@ -7,16 +7,29 @@ interface BookingWidgetProps {
 }
 
 export const BookingWidget = ({ width = "300px", height = "120px", className = "" }: BookingWidgetProps) => {
+  const containerId = `booksy-widget-container-${useId()}`;
+
   useEffect(() => {
-    if (window.BooksyWidget) {
-      window.BooksyWidget.init({
-        container: '#booksy-widget-container',
-        id: 300509,
-        country: 'pl',
-        lang: 'pl'
-      });
-    }
-  }, []);
+    const script = document.createElement('script');
+    script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (window.BooksyWidget) {
+        window.BooksyWidget.init({
+          container: `#${containerId}`,
+          id: 300509,
+          country: 'pl',
+          lang: 'pl'
+        });
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [containerId]);
 
   return (
     <div 
@@ -24,18 +37,18 @@ export const BookingWidget = ({ width = "300px", height = "120px", className = "
       style={{
         width,
         height,
-        overflow: 'hidden',
         position: 'relative',
-        background: 'transparent',
+        display: 'block',
+        background: '#F8F4F1',
       }}
     >
       <div
-        id="booksy-widget-container"
+        id={containerId}
         style={{
           width: '100%',
           height: '100%',
-          background: 'transparent',
-          border: 'none',
+          position: 'relative',
+          display: 'block',
         }}
       />
     </div>

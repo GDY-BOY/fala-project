@@ -984,14 +984,13 @@ export default function Home() {
                   <div className="text-xl md:text-2xl">Agata Kępa</div>
                   <div className="text-xl md:text-2xl">+48 695 296 763</div>
                   <div className="text-xl md:text-2xl mt-6">Gdynia</div>
-                  <div className="text-xl md:text-2xl">ul. Kilińskiego 12/2</div>
+                  <div className="text-xl md:text-2xl mb-8">ul. Kilińskiego 12/2</div>
                 </div>
                 
-                <div className="mt-4">
+                <div className="w-full max-w-[300px]">
                   <BookingWidget 
                     width="100%"
-                    height="120px"
-                    className="max-w-[300px]"
+                    height="150px"
                   />
                 </div>
               </div>
@@ -1164,23 +1163,6 @@ export default function Home() {
           }
         }
       `}</style>
-      {/* Booksy widget script */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.addEventListener('DOMContentLoaded', function() {
-              if (window.BooksyWidget && document.getElementById('booksy-widget-container')) {
-                window.BooksyWidget.init({
-                  container: '#booksy-widget-container',
-                  id: 300509,
-                  country: 'pl',
-                  lang: 'pl'
-                });
-              }
-            });
-          `,
-        }}
-      />
     </>
   );
 }
