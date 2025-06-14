@@ -16,11 +16,10 @@ export default function Home() {
               top: 0,
               left: 0,
               padding: "2vw",
-              width: "256px",
-              height: "256px",
-              maxWidth: "30vw",
+              width: "min(256px, 30vw)",  // changed to use min()
+              height: "min(256px, 30vw)", // changed to use min()
               minWidth: "96px",
-              pointerEvents: "none", // so it doesn't block interactions
+              pointerEvents: "none",
               background: "none",
             }}
           >
@@ -35,13 +34,13 @@ export default function Home() {
           </div>
           {/* Left (text, pinkish) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20" // reduced py-8 to py-6
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-6 md:py-0 z-20"
             style={{
               background: "#FFF7F1",
               textAlign: "center",
             }}
           >
-            <div className="hero-content w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "80px" }}>
+            <div className="hero-content w-full max-w-md mx-auto md:max-w-2xl" style={{ marginTop: "min(30vw, 256px)" }}>
               <h1
                 className="mb-3 md:mb-6" // reduced for mobile
                 style={{
@@ -996,62 +995,63 @@ export default function Home() {
         }
         @media (min-width: 768px) {
           .hero-content {
-            margin-top: 0 !important;
-          }
-        }
-      `}</style>
-      <style jsx>{`
-        @media (min-width: 768px) {
-          h1 {
-            font-size: 4.5rem !important;
-            line-height: 5rem !important;
-            margin-bottom: 2.5rem !important;
-          }
-          .md\:text-[2.2rem] {
-            font-size: 2.2rem !important;
-          }
-          .hero-lead {
-            font-size: 2.2rem !important;
-            margin-bottom: 2rem !important;
-          }
-          .md\:text-2xl {
-            font-size: 1.5rem !important;
-          }
-          .md\:px-12 {
-            padding-left: 3rem !important;
-            padding-right: 3rem !important;
-          }
-          .md\:py-3 {
-            padding-top: 0.75rem !important;
-            padding-bottom: 0.75rem !important;
-          }
-          .phone-number {
-            font-size: 2.4rem !important;
-          }
-        }
-        @media (max-width: 767px) {
-          .cześć-bullets {
-            font-size: 0.68rem !important;
-            line-height: 1.1rem !important;
-            padding-left: 1rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-          .uslugi-btn {
-            font-size: 1.1rem !important;
-            padding: 0.7rem 0 !important;
-          }
-          /* Hide image in fizjoterapia sportowa section on mobile */
-          #fizjoterapia-sportowa-section > .md\\:flex {
-            display: none !important;
-          }
-          #fizjoterapia-sportowa-section > div:first-child {
-            padding-top: 4rem !important;
+            margin-top: min(30vw, 256px) !important;
           }
         }
         @media (max-height: 700px) {
           .hero-content {
-            margin-top: 60px !important;
+            margin-top: min(30vw, 200px) !important;
           }
+          .hero-lead {
+            margin-bottom: 0.35rem !important;
+            font-size: 0.9rem !important;
+          }
+          h1 {
+            margin-bottom: 0.5rem !important;
+            font-size: 2rem !important;
+            line-height: 2.4rem !important;
+          }
+        }
+        @media (max-height: 600px) {
+          .hero-content {
+            margin-top: min(30vw, 180px) !important;
+          }
+          .hero-lead {
+            margin-bottom: 0.25rem !important;
+            font-size: 0.85rem !important;
+          }
+          h1 {
+            margin-bottom: 0.35rem !important;
+            font-size: 1.8rem !important;
+            line-height: 2.2rem !important;
+          }
+        }
+      `}</style>
+      {/* Booksy widget script */}
+      <script
+        type="text/javascript"
+        src="https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl"
+        async
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.addEventListener('DOMContentLoaded', function() {
+              if (window.BooksyWidget && document.getElementById('booksy-widget-container')) {
+                window.BooksyWidget.init({
+                  container: '#booksy-widget-container',
+                  id: 300509,
+                  country: 'pl',
+                  lang: 'pl'
+                });
+              }
+            });
+          `,
+        }}
+      />
+    </>
+  );
+}
           .hero-lead {
             margin-bottom: 0.35rem !important;
             font-size: 0.9rem !important;
