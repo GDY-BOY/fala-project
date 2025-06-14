@@ -113,7 +113,14 @@ export default function Home() {
                   }}
                   onClick={() => {
                     const el = document.getElementById("kontakt-section");
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                    if (el) {
+                      setTimeout(() => {
+                        el.scrollIntoView({ 
+                          behavior: "smooth",
+                          block: "start"  // ensures we scroll to the top of the section
+                        });
+                      }, 100);  // small delay to ensure proper positioning
+                    }
                   }}
                 >
                   kontakt
