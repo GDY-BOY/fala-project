@@ -236,7 +236,10 @@ export default function Home() {
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
                   Doświadczenie w zawodzie zdobywałam współpracując z:
                 </p>
-                <ul className="mb-3 md:mb-4 list-disc pl-5 md:pl-6" style={{ color: "#222426", fontSize: "0.97rem" }}>
+                <ul
+                  className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets"
+                  style={{ color: "#222426", fontSize: "0.97rem" }}
+                >
                   <li>
                     <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
                   </li>
@@ -475,6 +478,14 @@ export default function Home() {
           }
           .phone-number {
             font-size: 2.4rem !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .cześć-bullets {
+            font-size: 0.68rem !important;
+            line-height: 1.1rem !important;
+            padding-left: 1rem !important;
+            margin-bottom: 0.5rem !important;
           }
         }
       `}</style>
