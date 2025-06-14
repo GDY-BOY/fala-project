@@ -497,11 +497,11 @@ export default function Home() {
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontWeight: 900,
-                  fontSize: "2.2rem",
+                  fontSize: "1.35rem",
                   color: "#2D3924",
-                  letterSpacing: "-2px",
-                  lineHeight: "2.7rem",
-                  marginBottom: "1.2rem",
+                  letterSpacing: "-1px",
+                  lineHeight: "1.7rem",
+                  marginBottom: "0.7rem",
                 }}
                 className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
               >
