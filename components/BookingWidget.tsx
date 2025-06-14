@@ -1,14 +1,5 @@
 import { useEffect, useId } from 'react';
 
-declare global {
-  interface Window {
-    BooksyWidget?: {
-      open: () => void;
-      init: (options: { container: string; id: number; country: string; lang: string }) => void;
-    };
-  }
-}
-
 interface BookingWidgetProps {
   width?: string;
   height?: string;
@@ -20,25 +11,40 @@ export const BookingWidget = ({ width = "300px", height = "120px", className = "
 
   useEffect(() => {
     const script = document.createElement('script');
+    script.id = 'booksy-widget-script';
     script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
     script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (window.BooksyWidget) {
-        window.BooksyWidget.init({
-          container: `#${containerId}`,
-          id: 300509,
-          country: 'pl',
-          lang: 'pl'
-        });
+    
+    const initializeWidget = () => {
+      if (window.Booksy) {
+        try {
+          window.Booksy.initButtonWidget({
+            businessId: '300509',
+            locale: 'pl',
+          });
+        } catch (error) {
+          console.error('Failed to initialize Booksy widget:', error);
+        }
       }
     };
 
+    // Only add script if it doesn't exist
+    if (!document.getElementById('booksy-widget-script')) {
+      script.onload = initializeWidget;
+      document.body.appendChild(script);
+    } else {
+      // If script already exists, try to initialize widget directly
+      initializeWidget();
+    }
+
     return () => {
-      document.body.removeChild(script);
+      // Clean up script only if we added it
+      const existingScript = document.getElementById('booksy-widget-script');
+      if (existingScript && existingScript === script) {
+        document.body.removeChild(existingScript);
+      }
     };
-  }, [containerId]);
+  }, []);
 
   return (
     <div 
@@ -48,7 +54,7 @@ export const BookingWidget = ({ width = "300px", height = "120px", className = "
         height,
         position: 'relative',
         display: 'block',
-        background: '#F8F4F1',
+        background: 'transparent',
       }}
     >
       <div
