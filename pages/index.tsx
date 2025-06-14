@@ -262,35 +262,42 @@ export default function Home() {
         <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0">
           {/* Left (text) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-0 py-10 md:py-0 z-20"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-0 py-4 md:py-0 z-20"
             style={{
               background: "#fff",
               textAlign: "left",
             }}
           >
-            <div className="w-full max-w-xl mx-auto">
+            <div
+              className="w-full max-w-xl mx-auto"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+              }}
+            >
               <p
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "2rem",
+                  fontSize: "1.1rem",
                   fontWeight: 400,
                   color: "#222426",
-                  lineHeight: "2.7rem",
-                  marginBottom: "2.5rem",
+                  lineHeight: "1.6rem",
+                  marginBottom: "1.2rem",
                 }}
+                className="md:text-[2rem] md:leading-[2.7rem] md:mb-[2.5rem]"
               >
                 <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
               </p>
               <button
-                className="border-2 border-[#A984C4] px-10 py-2 rounded-lg transition text-[#A984C4] font-bold text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
+                className="border-2 border-[#A984C4] px-6 py-2 rounded-lg transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
                 style={{
                   background: "transparent",
                   boxShadow: "none",
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  marginTop: "1.5rem",
-                  marginBottom: "1.5rem",
-                  width: 160,
-                  height: 54,
+                  marginTop: "1rem",
+                  marginBottom: "1rem",
+                  width: 130,
+                  height: 44,
                   display: "block",
                   textAlign: "center",
                   letterSpacing: "0.5px",
@@ -567,6 +574,14 @@ export default function Home() {
             line-height: 1.1rem !important;
             padding-left: 1rem !important;
             margin-bottom: 0.5rem !important;
+          }
+          /* Fala section text squeeze on mobile */
+          .fala-section-text {
+            font-size: 1.1rem !important;
+            line-height: 1.6rem !important;
+            margin-bottom: 1.2rem !important;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
           }
         }
       `}</style>
