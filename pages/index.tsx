@@ -202,21 +202,27 @@ export default function Home() {
           </div>
           {/* Right (text) */}
           <div
-            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-12 py-12 md:py-0 z-20"
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-12 py-4 md:py-0 z-20"
             style={{
               background: "#F8F8F8",
               textAlign: "left",
             }}
           >
-            <div className="w-full max-w-2xl mx-auto">
+            <div
+              className="w-full max-w-2xl mx-auto"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+              }}
+            >
               <h2
-                className="mb-6"
+                className="mb-4 md:mb-6"
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
-                  fontSize: "2.5rem",
+                  fontSize: "1.5rem",
                   fontWeight: 900,
                   color: "#386641",
-                  lineHeight: "3rem",
+                  lineHeight: "2rem",
                   letterSpacing: "-1px",
                 }}
               >
@@ -224,13 +230,13 @@ export default function Home() {
               </h2>
               <div
                 style={{ fontFamily: "'DM Sans', Arial, sans-serif" }}
-                className="text-base md:text-lg"
+                className="text-sm md:text-lg"
               >
-                <p className="mb-4" style={{ color: "#222426", fontWeight: 500 }}>
+                <p className="mb-3 md:mb-4" style={{ color: "#222426", fontWeight: 500 }}>
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
                   Doświadczenie w zawodzie zdobywałam współpracując z:
                 </p>
-                <ul className="mb-4 list-disc pl-6" style={{ color: "#222426", fontSize: "1.1rem" }}>
+                <ul className="mb-3 md:mb-4 list-disc pl-5 md:pl-6" style={{ color: "#222426", fontSize: "0.97rem" }}>
                   <li>
                     <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
                   </li>
