@@ -480,7 +480,7 @@ export default function Home() {
         >
           {/* Left (text) */}
           <div
-            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-20 py-4 md:py-0 z-20"
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
             style={{
               background: "#9BAF8B",
               textAlign: "left",
@@ -497,10 +497,10 @@ export default function Home() {
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontWeight: 900,
-                  fontSize: "2rem",
+                  fontSize: "2.2rem",
                   color: "#2D3924",
                   letterSpacing: "-2px",
-                  lineHeight: "2.3rem",
+                  lineHeight: "2.7rem",
                   marginBottom: "1.2rem",
                 }}
                 className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
@@ -510,10 +510,10 @@ export default function Home() {
               <div
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1rem",
+                  fontSize: "1.08rem",
                   color: "#fff",
                   fontWeight: 400,
-                  lineHeight: "1.5rem",
+                  lineHeight: "1.6rem",
                   marginBottom: "1rem",
                 }}
                 className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
@@ -524,7 +524,7 @@ export default function Home() {
                 <p style={{ marginBottom: "0.7rem" }}>
                   Pokażę Ci, jak trenować mądrze, by uniknąć kolejnych przerw. Każdy plan opieram na indywidualnej ocenie – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to między innymi:
                 </p>
-                <ul style={{ marginLeft: "1.1rem", marginBottom: 0, color: "#fff", fontSize: "0.95rem", lineHeight: "1.4rem", listStyleType: "disc" }} className="md:text-[1.25rem] md:leading-[2rem]">
+                <ul style={{ marginLeft: "1.1rem", marginBottom: 0, color: "#fff", fontSize: "0.98rem", lineHeight: "1.4rem", listStyleType: "disc" }} className="md:text-[1.25rem] md:leading-[2rem]">
                   <li>terapia manualna,</li>
                   <li>ćwiczenia i trening medyczny,</li>
                   <li>suche igłowanie,</li>
@@ -777,6 +777,10 @@ export default function Home() {
           .uslugi-btn {
             font-size: 1.1rem !important;
             padding: 0.7rem 0 !important;
+          }
+          /* Hide image in fizjoterapia sportowa section on mobile */
+          #fizjoterapia-sportowa-section > .md\\:flex {
+            display: none !important;
           }
         }
       `}</style>
