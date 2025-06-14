@@ -224,14 +224,14 @@ export default function Home() {
           </div>
           {/* Right (text) */}
           <div
-            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-12 py-4 md:py-0 z-20"
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-2 md:px-8 py-4 md:py-0 z-20"
             style={{
               background: "#F8F8F8",
               textAlign: "left",
             }}
           >
             <div
-              className="w-full max-w-2xl mx-auto"
+              className="w-full max-w-[600px] mx-auto"
               style={{
                 paddingTop: "0.5rem",
                 paddingBottom: "0.5rem",
@@ -243,9 +243,10 @@ export default function Home() {
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: 900,
-                  color: "#2D3924",
+                  color: "#386641",
                   letterSpacing: "-1px",
                   lineHeight: "1.2",
+                  paddingTop: "0.5rem",
                 }}
               >
                 Cześć!
@@ -255,22 +256,23 @@ export default function Home() {
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
                   fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
-                  color: "#fff",
+                  color: "#222426",
                   fontWeight: 400,
                   lineHeight: "1.6",
-                  maxWidth: "90%",
+                  maxWidth: "100%",
+                  padding: "0.5rem 0",
                 }}
               >
-                <p className="mb-3 md:mb-4" style={{ color: "#222426", fontWeight: 500 }}>
+                <p className="mb-3 md:mb-4" style={{ fontWeight: 500 }}>
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
                   Doświadczenie w zawodzie zdobywałam współpracując z:
                 </p>
                 <ul
                   className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets"
-                  style={{ color: "#222426", fontSize: "0.97rem" }}
+                  style={{ fontSize: "0.97rem" }}
                 >
                   <li>
-                    <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzost Świata i Europy,
+                    <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
                   </li>
                   <li>
                     Byłam członkinią sztabu medycznego podczas <span className="font-bold">Igrzysk Olimpijskich</span> w Paryżu w 2024 roku.
