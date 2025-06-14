@@ -1151,16 +1151,3 @@ export default function Home() {
     </>
   );
 }
-            padding: 1rem 0;
-          }
-        }
-
-        @media (min-width: 1200px) {
-          .section-content {
-            max-width: 80%;
-          }
-        }
-      `}</style>
-    </>
-  );
-}
