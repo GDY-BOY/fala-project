@@ -473,21 +473,96 @@ export default function Home() {
         </section>
 
         {/* Fizjoterapia sportowa */}
-        <section id="fizjoterapia-sportowa-section" className="w-full bg-[#F8F8F8] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
-          <div className="w-full max-w-3xl flex flex-col items-center">
-            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
-              Fizjoterapia sportowa
-            </h3>
-            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
-              Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planuję skuteczną i bezpieczną ścieżkę rehabilitacji.<br />
-              Pokazuję, jak ćwiczyć mądrze, by unikać kolejnych kontuzji. Każdy program jest indywidualnie oceniany – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to m.in.:
-            </p>
-            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
-              <li>trening medyczny</li>
-              <li>suche igłowanie</li>
-              <li>masaż</li>
-              <li>kinesio taping</li>
-            </ul>
+        <section
+          id="fizjoterapia-sportowa-section"
+          className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0"
+          style={{ background: "#9BAF8B" }}
+        >
+          {/* Left (text) */}
+          <div
+            className="flex flex-col justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-6 md:px-20 py-8 md:py-0 z-20"
+            style={{
+              background: "#9BAF8B",
+              textAlign: "left",
+            }}
+          >
+            <div className="w-full max-w-2xl mx-auto">
+              <h2
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "3rem",
+                  color: "#2D3924",
+                  letterSpacing: "-2px",
+                  lineHeight: "1.1",
+                  marginBottom: "2.2rem",
+                }}
+              >
+                Fizjoterapia sportowa
+              </h2>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  fontSize: "1.35rem",
+                  color: "#fff",
+                  fontWeight: 400,
+                  lineHeight: "2.1rem",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                <p style={{ marginBottom: "1.2rem" }}>
+                  Dla zawodowców, amatorów i wszystkich, którzy kochają ruch. Pomagam wrócić do treningów po kontuzji, planując skuteczną i bezpieczną ścieżkę rehabilitacji.
+                </p>
+                <p style={{ marginBottom: "1.2rem" }}>
+                  Pokażę Ci, jak trenować mądrze, by uniknąć kolejnych przerw. Każdy plan opieram na indywidualnej ocenie – bo każdy organizm i cel sportowy są inne. Metody, które wykorzystuję to między innymi:
+                </p>
+                <ul style={{ marginLeft: "1.5rem", marginBottom: 0, color: "#fff", fontSize: "1.25rem", lineHeight: "2rem", listStyleType: "disc" }}>
+                  <li>terapia manualna,</li>
+                  <li>ćwiczenia i trening medyczny,</li>
+                  <li>suche igłowanie,</li>
+                  <li>pinoterapia,</li>
+                  <li>masaż,</li>
+                  <li>kinesio taping.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* Right (image, arch crop) - only on desktop */}
+          <div
+            className="hidden md:flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#9BAF8B",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "180px",
+                borderTopRightRadius: "180px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#9BAF8B",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/2.jpeg"
+                alt="Fizjoterapia sportowa"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
+            </div>
           </div>
         </section>
 
