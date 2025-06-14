@@ -295,29 +295,30 @@ export default function Home() {
         <section className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0">
           {/* Left (text) */}
           <div
-            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-3 md:px-0 py-4 md:py-0 z-20"
+            className="flex flex-col justify-center items-center w-full md:w-1/2 h-1/2 md:h-full px-8 md:px-16 py-4 md:py-0 z-20" // increased horizontal padding
             style={{
               background: "#fff",
               textAlign: "left",
             }}
           >
             <div
-              className="w-full max-w-xl mx-auto"
+              className="w-full max-w-2xl mx-auto"
               style={{
                 paddingTop: "0.5rem",
                 paddingBottom: "0.5rem",
+                width: "90%", // control width relative to container
               }}
             >
               <p
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "1.1rem",
+                  fontSize: "clamp(1.1rem, 3vw, 2.8rem)", // increased max font size
                   fontWeight: 400,
                   color: "#222426",
-                  lineHeight: "1.6rem",
-                  marginBottom: "1.2rem",
+                  lineHeight: "1.4",
+                  marginBottom: "2rem",
                 }}
-                className="md:text-[2rem] md:leading-[2.7rem] md:mb-[2.5rem]"
+                className="md:leading-[1.4] md:mb-[3rem]"
               >
                 <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
               </p>
