@@ -106,11 +106,18 @@ export default function Home() {
                   Wiem jak Ci pomóc!
                 </p>
                 <button
-                  className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg bg-transparent hover:bg-[#A984C4] hover:text-white md:text-2xl md:px-12 md:py-3"
+                  className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white md:px-12 md:py-3" // matched padding with kontakt
                   style={{
                     background: "transparent",
                     boxShadow: "none",
-                    borderRadius: 0, // sharp corners
+                    fontFamily: "'DM Sans', Arial, sans-serif",
+                    marginTop: "1rem",
+                    marginBottom: "1rem",
+                    borderRadius: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    // removed fixed width and height to match kontakt button
                   }}
                   onClick={() => {
                     const el = document.getElementById("kontakt-section");
@@ -312,7 +319,7 @@ export default function Home() {
               <p
                 style={{
                   fontFamily: "'DM Sans', Arial, sans-serif",
-                  fontSize: "clamp(1.1rem, 3vw, 2.8rem)", // increased max font size
+                  fontSize: "clamp(1.1rem, 3vw, 2.2rem)", // reduced from 2.8rem
                   fontWeight: 400,
                   color: "#222426",
                   lineHeight: "1.4",
@@ -323,21 +330,18 @@ export default function Home() {
                 <span style={{ color: "#386641", fontWeight: 700 }}>Fala Fizjo</span> to miejsce stworzone z pasji i potrzeby niesienia profesjonalnej pomocy fizjoterapeutycznej – w oparciu o aktualne światowe standardy, w atmosferze zrozumienia, motywacji i wsparcia.
               </p>
               <button
-                className="border-2 border-[#A984C4] px-6 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white"
+                className="border-2 border-[#A984C4] px-8 py-2 transition text-[#A984C4] font-bold text-lg md:text-2xl bg-transparent hover:bg-[#A984C4] hover:text-white md:px-12 md:py-3" // matched padding with kontakt
                 style={{
                   background: "transparent",
                   boxShadow: "none",
                   fontFamily: "'DM Sans', Arial, sans-serif",
                   marginTop: "1rem",
                   marginBottom: "1rem",
-                  width: 130,
-                  height: 44,
-                  display: "flex", // changed from "block"
+                  borderRadius: 0,
+                  display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  textAlign: "center",
-                  letterSpacing: "0.5px",
-                  borderRadius: 0,
+                  // removed fixed width and height to match kontakt button
                 }}
                 onClick={() => {
                   const el = document.getElementById("uslugi-section");
