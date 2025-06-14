@@ -247,6 +247,8 @@ export default function Home() {
                   letterSpacing: "-1px",
                   lineHeight: "1.2",
                   paddingTop: "0.5rem",
+                  marginTop: "2.2rem", // add space from top on mobile
+                  marginBottom: "1.2rem", // bring header closer to text
                 }}
               >
                 Cześć!
@@ -1068,6 +1070,10 @@ export default function Home() {
           }
         }
         @media (max-width: 767px) {
+          .section-header {
+            margin-top: 2.2rem !important;
+            margin-bottom: 1.2rem !important;
+          }
           .cześć-bullets {
             font-size: 0.68rem !important;
             line-height: 1.1rem !important;
