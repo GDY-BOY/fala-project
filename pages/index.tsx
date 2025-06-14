@@ -1203,10 +1203,3 @@ export default function Home() {
     </>
   );
 }
-            });
-          `,
-        }}
-      />
-    </>
-  );
-}
