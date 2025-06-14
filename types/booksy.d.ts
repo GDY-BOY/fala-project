@@ -1,4 +1,4 @@
-interface Window {
+declare interface Window {
   Booksy: {
     ButtonWidget: {
       show: () => void;

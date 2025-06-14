@@ -1,69 +1,65 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const BookingButton = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
-    script.async = true;
-    document.body.appendChild(script);
+    // Load Booksy script only once
+    const existingScript = document.getElementById('booksy-script');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'booksy-script';
+      script.src = 'https://booksy.com/widget/code.js?id=300509&country=pl&lang=pl';
+      script.async = true;
 
-    script.onload = () => {
-      if (window.BooksyWidget) {
-        window.BooksyWidget.init({
-          container: '#hidden-booksy-container',
-          id: 300509,
-          country: 'pl',
-          lang: 'pl'
-        });
-      }
-    };
+      script.onload = () => {
+        if (window.Booksy) {
+          window.Booksy.initButtonWidget({
+            businessId: '300509',
+            locale: 'pl',
+          });
+        }
+      };
+
+      document.body.appendChild(script);
+    }
 
     return () => {
-      document.body.removeChild(script);
+      const script = document.getElementById('booksy-script');
+      if (script) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
-  const handleClick = () => {
-    const widget = containerRef.current?.querySelector('iframe');
-    if (widget) {
-      (widget as HTMLElement).click();
+  const handleClick = useCallback(() => {
+    if (window.Booksy?.ButtonWidget) {
+      window.Booksy.ButtonWidget.show();
     }
-  };
+  }, []);
 
   return (
-    <>
-      <button
-        className="uslugi-btn"
-        style={{
-          width: "100%",
-          border: "3px solid #C7A6E5",
-          borderRadius: 0,
-          background: "transparent",
-          color: "#C7A6E5",
-          fontWeight: 700,
-          fontSize: "clamp(1.2rem, 4vw, 2rem)",
-          padding: "clamp(0.8rem, 2vw, 1.2rem) 0",
-          textAlign: "center",
-          letterSpacing: "1px",
-          transition: "background 0.2s, color 0.2s",
-        }}
-        onClick={handleClick}
-      >
-        ZAREZERWUJ
-      </button>
-      <div
-        ref={containerRef}
-        id="hidden-booksy-container"
-        style={{
-          position: 'absolute',
-          visibility: 'hidden',
-          pointerEvents: 'none',
-          width: '100px',
-          height: '100px',
-        }}
-      />
-    </>
+    <button
+      className="uslugi-btn"
+      style={{
+        width: '100%',
+        border: '3px solid #C7A6E5',
+        borderRadius: 0,
+        background: isHovered ? '#C7A6E5' : 'transparent',
+        color: isHovered ? '#fff' : '#C7A6E5',
+        fontWeight: 700,
+        fontSize: 'clamp(1.2rem, 4vw, 2rem)',
+        padding: 'clamp(0.8rem, 2vw, 1.2rem) 0',
+        textAlign: 'center',
+        letterSpacing: '1px',
+        transition: 'all 0.2s ease-in-out',
+        cursor: 'pointer',
+      }}
+      onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      ZAREZERWUJ
+    </button>
   );
 };

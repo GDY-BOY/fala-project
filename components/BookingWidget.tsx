@@ -1,5 +1,14 @@
 import { useEffect, useId } from 'react';
 
+declare global {
+  interface Window {
+    BooksyWidget?: {
+      open: () => void;
+      init: (options: { container: string; id: number; country: string; lang: string }) => void;
+    };
+  }
+}
+
 interface BookingWidgetProps {
   width?: string;
   height?: string;
