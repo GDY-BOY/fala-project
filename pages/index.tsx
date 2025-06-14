@@ -265,15 +265,15 @@ export default function Home() {
                   padding: "0.5rem 0",
                 }}
               >
-                <p className="mb-3 md:mb-4 czesc-text" style={{ fontWeight: 500 }}>
+                <p className="mb-3 md:mb-4" style={{ fontWeight: 500 }}>
                   Nazywam się <span className="font-bold">Agata Kępa</span>, jestem fizjoterapeutką.<br />
                   Doświadczenie w zawodzie zdobywałam współpracując z:
                 </p>
                 <ul
-                  className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets czesc-text"
-                  style={{ fontSize: "0.97rem" }}
+                  className="mb-3 md:mb-4 list-disc pl-5 md:pl-6 cześć-bullets"
+                  style={{ fontSize: "clamp(0.85rem, 2.5vw, 0.97rem)" }} // dynamic scaling for mobile
                 >
-                  <li>
+                  <li className="mb-2">
                     <span className="font-bold">Polskim Związkiem Lekkiej Atletyki</span>, gdzie opiekowałam się głównie blokiem damskiego sprintu na zgrupowaniach w kraju i za granicą a także na imprezach rangi Mistrzostw Świata i Europy,
                   </li>
                   <li>
@@ -1151,17 +1151,6 @@ export default function Home() {
         @media (min-width: 1200px) {
           .section-content {
             max-width: 80%;
-          }
-        }
-
-        @media (max-width: 380px) {
-          .czesc-text {
-            font-size: 0.9rem !important;
-            line-height: 1.4 !important;
-          }
-          .cześć-bullets {
-            font-size: 0.85rem !important;
-            padding-bottom: 1rem !important;
           }
         }
       `}</style>
