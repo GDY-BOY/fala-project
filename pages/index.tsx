@@ -781,20 +781,106 @@ export default function Home() {
         </section>
 
         {/* Terapia TECAR */}
-        <section className="w-full bg-[#EAF2E0] min-h-screen h-screen flex flex-col justify-center items-center px-6 md:px-24">
-          <div className="w-full max-w-3xl flex flex-col items-center">
-            <h3 className="text-3xl font-bold text-[#386641] mb-6 text-center" style={{ fontFamily: "'Merriweather', Georgia, serif" }}>
-              Terapia TECAR
-            </h3>
-            <p className="mb-4 text-center" style={{ fontSize: "1.1rem" }}>
-              Nowoczesna regeneracja dla aktywnych. Terapia TECAR to nowoczesna metoda fizjoterapeutyczna, która wspomaga regenerację tkanek. Jak działa? Urządzenie przekazuje prąd radiowy do wnętrza ciała, które pobudzają naturalne procesy regeneracyjne. Organizm zaczyna sam lepiej się leczyć. <b>TECAR</b> – zabieg jest bezbolesny, a często wręcz przyjemny!
-            </p>
-            <ul className="list-disc pl-6 mb-2 mx-auto" style={{ fontSize: "1.1rem", maxWidth: "500px" }}>
-              <li>Regeneracja po treningu</li>
-              <li>Kontuzje – skręcenia, stłuczenia, złamania</li>
-              <li>Przeciążenia – ból pleców, barku, kolan</li>
-              <li>Przyspieszenie gojenia po operacjach</li>
-            </ul>
+        <section
+          id="terapia-tecar-section"
+          className="w-full min-h-screen h-screen flex flex-col md:flex-row relative px-0"
+          style={{ background: "#C4DAAF" }}
+        >
+          {/* Left (image, arch crop) - only on desktop */}
+          <div
+            className="hidden md:flex items-center justify-center w-full md:w-1/2 h-1/2 md:h-full relative"
+            style={{
+              background: "#C4DAAF",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-end justify-center"
+              style={{
+                width: "80%",
+                height: "90%",
+                marginTop: 0,
+                marginBottom: 0,
+                borderTopLeftRadius: "180px",
+                borderTopRightRadius: "180px",
+                borderBottomLeftRadius: "0",
+                borderBottomRightRadius: "0",
+                overflow: "hidden",
+                background: "#C4DAAF",
+                clipPath: "ellipse(100% 66% at 50% 66%)",
+              }}
+            >
+              <Image
+                src="/images/3.jpeg"
+                alt="Terapia TECAR"
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+                className="w-full h-full"
+                priority
+              />
+            </div>
+          </div>
+          {/* Right (text) */}
+          <div
+            className="flex flex-col justify-start md:justify-center items-start w-full md:w-1/2 h-1/2 md:h-full px-4 md:px-20 py-4 md:py-0 z-20"
+            style={{
+              background: "#C4DAAF",
+              textAlign: "left",
+              paddingTop: "4rem",
+            }}
+          >
+            <div
+              className="w-full max-w-2xl mx-auto mt-8 md:mt-0"
+              style={{
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "1.35rem",
+                  color: "#2D3924",
+                  letterSpacing: "-1px",
+                  lineHeight: "1.7rem",
+                  marginBottom: "0.7rem",
+                }}
+                className="md:text-[3rem] md:leading-[1.1] md:mb-[2.2rem]"
+              >
+                Terapia TECAR
+              </h2>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', Arial, sans-serif",
+                  fontSize: "1.08rem",
+                  color: "#fff",
+                  fontWeight: 400,
+                  lineHeight: "1.6rem",
+                  marginBottom: "1rem",
+                }}
+                className="md:text-[1.35rem] md:leading-[2.1rem] md:mb-[1.5rem]"
+              >
+                <p style={{ marginBottom: "0.7rem" }}>
+                  Nowoczesna regeneracja dla aktywnych. Terapia TECAR to nowoczesna metoda fizjoterapeutyczna, która wspomaga regenerację tkanek.
+                </p>
+                <p style={{ marginBottom: "0.7rem" }}>
+                  Jak działa? Urządzenie przesyła fale radiowe do wnętrza ciała, które pobudzają naturalne procesy regeneracyjne. Organizm zaczyna sam lepiej się leczyć. Co ważne – zabieg jest bezbolesny, a często wręcz przyjemny!
+                </p>
+                <p style={{ marginBottom: "0.7rem" }}>
+                  Dla kogo?
+                </p>
+                <ul style={{ marginLeft: "1.1rem", marginBottom: 0, color: "#fff", fontSize: "0.98rem", lineHeight: "1.4rem", listStyleType: "disc" }} className="md:text-[1.25rem] md:leading-[2rem]">
+                  <li>Regeneracja po treningu,</li>
+                  <li>kontuzje – skręcenia, stłuczenia, złamania,</li>
+                  <li>przeciążenia – ból pleców, kolan, barku,</li>
+                  <li>przyspieszenie gojenia po operacjach.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
