@@ -410,7 +410,7 @@ export default function Home() {
                 style={{
                   fontFamily: "NotulenSerifExtraBold, 'Merriweather', Georgia, serif",
                   fontWeight: 900,
-                  fontSize: "3rem",
+                  fontSize: "clamp(2rem, 5vw, 3rem)", // adjusted scaling
                   color: "#386641",
                   letterSpacing: "-2px",
                   lineHeight: "1",
@@ -420,18 +420,18 @@ export default function Home() {
               >
                 Usługi
               </span>
-              <div className="flex flex-col gap-8 w-full">
+              <div className="flex flex-col gap-4 md:gap-8 w-full"> {/* reduced gap on mobile */}
                 <button
                   className="uslugi-btn"
                   style={{
                     width: "100%",
                     border: "3px solid #C7A6E5",
-                    borderRadius: 0, // sharp corners
+                    borderRadius: 0,
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
-                    fontSize: "2rem",
-                    padding: "1.2rem 0",
+                    fontSize: "clamp(1.2rem, 4vw, 2rem)", // adjusted font scaling
+                    padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
                     transition: "background 0.2s, color 0.2s",
@@ -452,8 +452,8 @@ export default function Home() {
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
-                    fontSize: "2rem",
-                    padding: "1.2rem 0",
+                    fontSize: "clamp(1.2rem, 4vw, 2rem)", // adjusted font scaling
+                    padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
                     transition: "background 0.2s, color 0.2s",
@@ -474,8 +474,8 @@ export default function Home() {
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
-                    fontSize: "2rem",
-                    padding: "1.2rem 0",
+                    fontSize: "clamp(1.2rem, 4vw, 2rem)", // adjusted font scaling
+                    padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
                     transition: "background 0.2s, color 0.2s",
@@ -496,8 +496,8 @@ export default function Home() {
                     background: "transparent",
                     color: "#C7A6E5",
                     fontWeight: 700,
-                    fontSize: "2rem",
-                    padding: "1.2rem 0",
+                    fontSize: "clamp(1.2rem, 4vw, 2rem)", // adjusted font scaling
+                    padding: "clamp(0.8rem, 2vw, 1.2rem) 0", // adjusted padding scaling
                     textAlign: "center",
                     letterSpacing: "1px",
                     transition: "background 0.2s, color 0.2s",
