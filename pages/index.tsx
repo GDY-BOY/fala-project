@@ -487,6 +487,32 @@ export default function Home() {
                 >
                   MASAŻ SPORTOWY
                 </button>
+                <button
+                  className="uslugi-btn"
+                  style={{
+                    width: "100%",
+                    border: "3px solid #C7A6E5",
+                    borderRadius: 0,
+                    background: "transparent",
+                    color: "#C7A6E5",
+                    fontWeight: 700,
+                    fontSize: "2rem",
+                    padding: "1.2rem 0",
+                    textAlign: "center",
+                    letterSpacing: "1px",
+                    transition: "background 0.2s, color 0.2s",
+                  }}
+                  onClick={() => {
+                    const el = document.getElementById("terapia-tecar-section");
+                    if (el) {
+                      setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }, 100);
+                    }
+                  }}
+                >
+                  TERAPIA TECAR
+                </button>
               </div>
             </div>
           </div>
